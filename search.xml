@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>A New Way To Sync SourceCode Of Hexo</title>
+      <link href="/2020/03/25/aNewWayToSyncSourceCodeOfHexo/"/>
+      <url>/2020/03/25/aNewWayToSyncSourceCodeOfHexo/</url>
+      
+        <content type="html"><![CDATA[<p>I never give up finding a way to update my blog conveniently. </p><a id="more"></a><h3 id="Let-me-upset"><a href="#Let-me-upset" class="headerlink" title="Let me upset"></a>Let me upset</h3><p>Thanks for GitHub pages and Hexo, you could read this page. However, in the past few years, I always spent too much time backing up the source code because of changing different computers in different places, which let me upset. I never give up finding a way to update my blog conveniently. </p><p>I used to manage the source code by git which I could push my source code to a branch of the repository on Github. And at the new place, I could download the code by git-clone. Unfortunately, I always took too much time to configure the ssh-key until it could work successfully. It doesn’t work for me, and I think it is high time to give up the old way!</p><h3 id="No-comma-why"><a href="#No-comma-why" class="headerlink" title="No comma, why?"></a>No comma, why?</h3><p>I build the site in Onedrive. This sounds great! Of course, I also need to install Git, Nodejs on the new computer; that’s all. <del>~ Why is there no comma in English? ~</del> The only thing I have to do in terms of configuration is adding the path of hexo-cli to my computer’s environment variable. The path of hexo-cli is just like this:<br><blue>C:\Users\Administrator\OneDrive\loglist\node_modules\hexo\bin</blue></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Site </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cSharpBase</title>
       <link href="/2020/03/24/cSharpBase/"/>
       <url>/2020/03/24/cSharpBase/</url>
