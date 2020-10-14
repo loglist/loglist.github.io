@@ -8,6 +8,46 @@
     </url>
 
     <url>
+        <loc>http://loglist.github.io/2020/10/14/shell-ffmpeg%E6%89%B9%E9%87%8F%E8%BD%ACflac%E8%87%B3wav%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+        <lastmod>2020-10-14T08:13:13.876Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/2020/10/11/theErrorAboutInstallOlaindex/</loc>
+        <lastmod>2020-10-14T05:58:45.004Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/2020/09/30/numpy/</loc>
+        <lastmod>2020-10-14T04:25:15.529Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/2020/09/24/javaScriptBase/</loc>
+        <lastmod>2020-09-29T10:13:45.532Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/2020/03/24/cSharpBase/</loc>
+        <lastmod>2020-09-26T17:42:13.292Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/2020/03/25/aNewWayToSyncSourceCodeOfHexo/</loc>
         <lastmod>2020-03-25T10:16:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,16 +56,8 @@
     </url>
 
     <url>
-        <loc>http://loglist.github.io/2020/03/24/cSharpBase/</loc>
-        <lastmod>2020-03-24T14:19:36.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/2020/08/13/hello-world/</loc>
-        <lastmod>2020-03-23T11:13:05.109Z</lastmod>
+        <loc>http://loglist.github.io/2020/09/15/hello-world/</loc>
+        <lastmod>2020-03-23T11:13:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

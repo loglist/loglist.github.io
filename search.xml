@@ -4,9 +4,101 @@
   
     
     <entry>
+      <title>shell+ffmpeg批量转flac至wav的方法</title>
+      <link href="2020/10/14/shell-ffmpeg%E6%89%B9%E9%87%8F%E8%BD%ACflac%E8%87%B3wav%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>2020/10/14/shell-ffmpeg%E6%89%B9%E9%87%8F%E8%BD%ACflac%E8%87%B3wav%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>前段时间搭建了<a href="https://loglist.github.io/2020/10/11/theErrorAboutInstallOlaindex/">H大</a>个人网盘，配合<red>适当的</red><a href="https://xn--mesr8b36x.com/#/register?code=aPPAoth1" target="_blank" rel="external nofollow noopener noreferrer">节点</a>速度不错。</p><h3 id="button"><a href="#button" class="headerlink" title="button"></a>button</h3><p><btn regular><a href="https://xaoxuu.com" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> 示例博客</a></btn></p><h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details 标题><summary> 参数 </summary>              <div class="content">              <p><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" srcset="data:image/png;base64,666" alt></p>              </div>            </details><h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script><p><img src="/source/storage/image/icon/loglist.png" class="lazyload" data-srcset="/source/storage/image/icon/loglist.png" srcset="data:image/png;base64,666" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Shell </tag>
+            
+            <tag> ffmpeg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>theErrorAboutInstallOlaindex</title>
+      <link href="2020/10/11/theErrorAboutInstallOlaindex/"/>
+      <url>2020/10/11/theErrorAboutInstallOlaindex/</url>
+      
+        <content type="html"><![CDATA[<h3 id="theErrorCameFrome"><a href="#theErrorCameFrome" class="headerlink" title="theErrorCameFrome"></a>theErrorCameFrome</h3><p>I came across <a href="https://github.com/WangNingkai/OLAINDEX" target="_blank" rel="external nofollow noopener noreferrer">this project</a>  by chance. By this project, i can browse document( like video, pdf, pic and so on) easily.</p><p>I fellow the <a href="https://olaindex.js.org/#/" target="_blank" rel="external nofollow noopener noreferrer">wiki</a> of the OlaINdex step by step. However, you don’t kow how terrible it is! The reason is that the project update to the vesion 5.0, but its wiki was at version 4.0. I just like a dumb bunny!</p><div class="gallery 参数">              <p><img src="/storage/image/olaindex_1.jpg" class="lazyload" data-srcset="/storage/image/olaindex_1.jpg" srcset="data:image/png;base64,666" alt="thedocyourneed"></p>            </div><p>And finally, I used <a href="https://suyin-blog.club/2020/2VH10V0/" target="_blank" rel="external nofollow noopener noreferrer">another document</a> under the OlaIndex project <a href="https://github.com/WangNingkai/OLAINDEX/issues/305" target="_blank" rel="external nofollow noopener noreferrer">issue</a>。</p><p>And at this time，it goes very well except a little problem.</p><h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><h4 id="ErrorCode-500"><a href="#ErrorCode-500" class="headerlink" title="ErrorCode: 500"></a>ErrorCode: 500</h4><p>Just beacuse you can’t do <green>composer run install-app</green> correctly, and you need to check: </p><ul><li>if these php function delet correctly</li><li>if the .env exists under your site folder(name is same as your domain)</li><li>if the .env sets correctly</li><li>if the <green>composer install -vvv</green> runs correctly</li></ul><p>After these, you can run the fellow code again,</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">composer install -vvv </span><br><span class="line">chmod -R 777 storage </span><br><span class="line">chown -R www:www * </span><br><span class="line">composer run install-app</span><br></pre></td></tr></table></figure><p>From here, you can see </p><div class="gallery 参数">              <p><img src="/storage/image/olaindex_4.jpg" class="lazyload" data-srcset="/storage/image/olaindex_4.jpg" srcset="data:image/png;base64,666" alt="firstconsult"></p>            </div><p>取得阶段性胜利！</p><h4 id="ErrorCode-419"><a href="#ErrorCode-419" class="headerlink" title="ErrorCode: 419"></a>ErrorCode: 419</h4><p><btn regular><a href="https://xaoxuu.com" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> 示例博客</a></btn></p><h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details 标题><summary> 参数 </summary>              <div class="content">              <p><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" srcset="data:image/png;base64,666" alt></p>              </div>            </details><h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>numpy</title>
+      <link href="2020/09/30/numpy/"/>
+      <url>2020/09/30/numpy/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Array-represents-Pic"><a href="#Array-represents-Pic" class="headerlink" title="Array represents Pic"></a>Array represents Pic</h3><p>need to install a third party library, </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pillow</span><br></pre></td></tr></table></figure><p><red>read pic –&gt; convert by PIL –&gt; save as another pic</red></p><!-- <btn regular>[<i class='fas fa-play-circle'></i> 示例博客](https://xaoxuu.com)</btn> --><a id="more"></a><h2 id="Matpotlib"><a href="#Matpotlib" class="headerlink" title="Matpotlib"></a>Matpotlib</h2><h3 id="Partition-and-location"><a href="#Partition-and-location" class="headerlink" title="Partition and location"></a>Partition and location</h3><p>If I need more than one figure, how can I make it? Just like the figure below.</p><div class="gallery 参数">              <p><img src="/storage/image/Figure_1.png" class="lazyload" data-srcset="/storage/image/Figure_1.png" srcset="data:image/png;base64,666" alt="gridspec"></p>            </div><details using plt.subplot can do it><summary> 参数 </summary>              <div class="content">              <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">pip install matpotlib <span class="comment"># first use needing to intall the third party library</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a =np.arange(<span class="number">0.0</span>,<span class="number">5.0</span>,<span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)   <span class="comment">#partition  and location</span></span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>])</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>) </span><br><span class="line">plt.plot(a,np.cos(<span class="number">2</span>*np.pi*a),<span class="string">"r,-"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>              </div>            </details><p>more complex grid, use <strong>plt.subplot2grid()</strong>, just like the code below</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">0</span>),colspan=<span class="number">3</span>/rowspan=<span class="number">2</span>)</span><br></pre></td></tr></table></figure><p>Or use <strong>matplotlib.gridspec</strong>， making a grid shown as in the figure below</p><div class="gallery 参数">              <p><img src="/storage/image/Figure_2.png" class="lazyload" data-srcset="/storage/image/Figure_2.png" srcset="data:image/png;base64,666" alt="gridspec"></p>            </div><details using matplotlib.gridspec can do it><summary> 参数 </summary>              <div class="content">              <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gsp</span><br><span class="line"></span><br><span class="line">gs = gsp.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>, :])</span><br><span class="line"></span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>, :<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>:, <span class="number">2</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">2</span>, <span class="number">1</span>]) <span class="comment"># or using 'ax2 = plt.subplot(gs[-1, 1])'</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>              </div>            </details><table><thead><tr><th>0</th><th>1</th><th>2 or -1</th></tr></thead><tbody><tr><td>1</td><td></td><td></td></tr><tr><td>2 or -1</td><td></td><td></td></tr></tbody></table><p>And what is the meaning of <green>x, y, z</green> in the plt.subplot(gs[x, y:z]) ?<br>Especially，<strong>‘，’ is a divider.</strong><br>The left part represents the index of row, and the right part represent the index of column. Swaping the left and right part can lead to a block rotate 90 degrees.</p><h3 id="Supporte-Chinese"><a href="#Supporte-Chinese" class="headerlink" title="Supporte Chinese"></a>Supporte Chinese</h3><details font-family table><summary> 参数 </summary>              <div class="content">              <table><thead><tr><th>fontproperties</th><th>中文字体</th></tr></thead><tbody><tr><td>Simhei</td><td>黑体</td></tr></tbody></table>              </div>            </details><p><btn regular><a href="https://xaoxuu.com" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> 示例博客</a></btn></p><h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details demo><summary> 参数 </summary>              <div class="content">              <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a =np.arange(<span class="number">0.0</span>,<span class="number">5.0</span>,<span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)   <span class="comment">#partition  and location</span></span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>])</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>) </span><br><span class="line">plt.plot(a,np.cos(<span class="number">2</span>*np.pi*a),<span class="string">"r,-"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>              </div>            </details><h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Numpy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>javaScriptBase</title>
+      <link href="2020/09/24/javaScriptBase/"/>
+      <url>2020/09/24/javaScriptBase/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Variables-and-operations"><a href="#Variables-and-operations" class="headerlink" title="Variables and operations"></a>Variables and operations</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt(hint,Preset<span class="comment">/*string*/</span>)--&gt;operate--&gt;alert()<span class="comment">//Humanized program</span></span><br></pre></td></tr></table></figure><details demo><summary> blue </summary>              <div class="content">              <p><btn regular><a href="/storage/jscode/jsvar.html"><i class="fas fa-play-circle"></i> multiplication</a></btn></p>              </div>            </details><a id="more"></a><h3 id="Judgement-statement"><a href="#Judgement-statement" class="headerlink" title="Judgement statement"></a>Judgement statement</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>()&#123;      <span class="comment">//if statement</span></span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>()&#123;</span><br><span class="line">    ···</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><details base><summary> cyan </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/base.html"><i class="fas fa-play-circle"></i> base</a></btn></p>              </div>            </details><details method><summary> green </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/method.html"><i class="fas fa-play-circle"></i> method</a></btn></p>              </div>            </details><details constructor><summary> yellow </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/constructor.html"><i class="fas fa-play-circle"></i> constructor</a></btn></p>              </div>            </details><details operator><summary> red </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/operator.html"><i class="fas fa-play-circle"></i> operator</a></btn></p>              </div>            </details>]]></content>
+      
+      
+      <categories>
+          
+          <category> Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
-      <link href="/2020/08/13/hello-world/"/>
-      <url>/2020/08/13/hello-world/</url>
+      <link href="2020/09/15/hello-world/"/>
+      <url>2020/09/15/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external nofollow noopener noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external nofollow noopener noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external nofollow noopener noreferrer">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external nofollow noopener noreferrer">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external nofollow noopener noreferrer">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external nofollow noopener noreferrer">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="external nofollow noopener noreferrer">Deployment</a></p>]]></content>
       
@@ -30,8 +122,8 @@
     
     <entry>
       <title>A New Way To Sync SourceCode Of Hexo</title>
-      <link href="/2020/03/25/aNewWayToSyncSourceCodeOfHexo/"/>
-      <url>/2020/03/25/aNewWayToSyncSourceCodeOfHexo/</url>
+      <link href="2020/03/25/aNewWayToSyncSourceCodeOfHexo/"/>
+      <url>2020/03/25/aNewWayToSyncSourceCodeOfHexo/</url>
       
         <content type="html"><![CDATA[<p>I never give up finding a way to update my blog conveniently. </p><a id="more"></a><h3 id="Let-me-upset"><a href="#Let-me-upset" class="headerlink" title="Let me upset"></a>Let me upset</h3><p>Thanks for GitHub pages and Hexo, you could read this page. However, in the past few years, I always spent too much time backing up the source code because of changing different computers in different places, which let me upset. I never give up finding a way to update my blog conveniently. </p><p>I used to manage the source code by git which I could push my source code to a branch of the repository on Github. And at the new place, I could download the code by git-clone. Unfortunately, I always took too much time to configure the ssh-key until it could work successfully. It doesn’t work for me, and I think it is high time to give up the old way!</p><h3 id="No-comma-why"><a href="#No-comma-why" class="headerlink" title="No comma, why?"></a>No comma, why?</h3><p>I build the site in Onedrive. This sounds great! Of course, I also need to install Git, Nodejs on the new computer; that’s all. <del>~ Why is there no comma in English? ~</del> The only thing I have to do in terms of configuration is adding the path of hexo-cli to my computer’s environment variable. The path of hexo-cli is just like this:<br><blue>C:\Users\Administrator\OneDrive\loglist\node_modules\hexo\bin</blue></p>]]></content>
       
@@ -55,15 +147,15 @@
     
     <entry>
       <title>cSharpBase</title>
-      <link href="/2020/03/24/cSharpBase/"/>
-      <url>/2020/03/24/cSharpBase/</url>
+      <link href="2020/03/24/cSharpBase/"/>
+      <url>2020/03/24/cSharpBase/</url>
       
-        <content type="html"><![CDATA[<details blue><summary> class </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/class.html"><i class="fas fa-play-circle"></i> class</a></btn></p>              </div>            </details><a id="more"></a><details cyan><summary> base </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/base.html"><i class="fas fa-play-circle"></i> base</a></btn></p>              </div>            </details><details green><summary> method </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/method.html"><i class="fas fa-play-circle"></i> method</a></btn></p>              </div>            </details><details yellow><summary> constructor </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/constructor.html"><i class="fas fa-play-circle"></i> constructor</a></btn></p>              </div>            </details><details red><summary> operator </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/operator.html"><i class="fas fa-play-circle"></i> operator</a></btn></p>              </div>            </details>]]></content>
+        <content type="html"><![CDATA[<details class><summary> blue </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/class.html"><i class="fas fa-play-circle"></i> class</a></btn></p>              </div>            </details><a id="more"></a><details base><summary> cyan </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/base.html"><i class="fas fa-play-circle"></i> base</a></btn></p>              </div>            </details><details method><summary> green </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/method.html"><i class="fas fa-play-circle"></i> method</a></btn></p>              </div>            </details><details constructor><summary> yellow </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/constructor.html"><i class="fas fa-play-circle"></i> constructor</a></btn></p>              </div>            </details><details operator><summary> red </summary>              <div class="content">              <p><btn regular><a href="/storage/csharp/operator.html"><i class="fas fa-play-circle"></i> operator</a></btn></p>              </div>            </details>]]></content>
       
       
       <categories>
           
-          <category> CodeLanguage </category>
+          <category> Codelanguage </category>
           
       </categories>
       
