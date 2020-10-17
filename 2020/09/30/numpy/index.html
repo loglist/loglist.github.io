@@ -25,10 +25,7 @@
   
 
   
-    <meta name="description" content="Array represents Picneed to install a third party library, 
-1pip install pillow
-read pic –&gt; convert by PIL –&gt; save as another pic
-">
+    <meta name="description" content="Array represents Picneed to install a third party library, pip install pillow, read pic --> convert by PIL --> save as another pic">
   
 
   <!-- feed -->
@@ -439,19 +436,15 @@ read pic –&gt; convert by PIL –&gt; save as another pic
 
 
   
-  <h3 id="Array-represents-Pic"><a href="#Array-represents-Pic" class="headerlink" title="Array represents Pic"></a>Array represents Pic</h3><p>need to install a third party library, </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pillow</span><br></pre></td></tr></table></figure>
-<p><red>read pic –&gt; convert by PIL –&gt; save as another pic</red></p>
-<!-- <btn regular>[<i class='fas fa-play-circle'></i> 示例博客](https://xaoxuu.com)</btn> -->
-
+  <h3 id="Array-represents-Pic"><a href="#Array-represents-Pic" class="headerlink" title="Array represents Pic"></a>Array represents Pic</h3><p>need to install a third party library, <code>pip install pillow</code>, <span class="p red">read pic --> convert by PIL --> save as another pic</span></p>
 <a id="more"></a>
 
-<h2 id="Matpotlib"><a href="#Matpotlib" class="headerlink" title="Matpotlib"></a>Matpotlib</h2><h3 id="Partition-and-location"><a href="#Partition-and-location" class="headerlink" title="Partition and location"></a>Partition and location</h3><p>If I need more than one figure, how can I make it? Just like the figure below.</p>
-<div class="gallery 参数">
-              <p><img src="/storage/image/Figure_1.png" class="lazyload" data-srcset="/storage/image/Figure_1.png" srcset="data:image/png;base64,666" alt="gridspec"></p>
+<h3 id="Matpotlib"><a href="#Matpotlib" class="headerlink" title="Matpotlib"></a>Matpotlib</h3><h4 id="Partition-and-location"><a href="#Partition-and-location" class="headerlink" title="Partition and location"></a>Partition and location</h4><p>If I need more than one figure, how can I make it? Just like the figure below.</p>
+<div class="gallery 图表上下分布">
+              <p><img src="/storage/image/numpy_Figure_1.png" class="lazyload" data-srcset="/storage/image/numpy_Figure_1.png" srcset="data:image/png;base64,666" alt="图表上下分布"></p>
             </div>
 
-<details using plt.subplot can do it><summary> 参数 </summary>
+<details using plt.subplot can do it><summary> plt.subplot code </summary>
               <div class="content">
               <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">pip install matpotlib <span class="comment"># first use needing to intall the third party library</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a =np.arange(<span class="number">0.0</span>,<span class="number">5.0</span>,<span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)   <span class="comment">#partition  and location</span></span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>])</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>) </span><br><span class="line">plt.plot(a,np.cos(<span class="number">2</span>*np.pi*a),<span class="string">"r,-"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
               </div>
@@ -460,11 +453,11 @@ read pic –&gt; convert by PIL –&gt; save as another pic
 <p>more complex grid, use <strong>plt.subplot2grid()</strong>, just like the code below</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">0</span>),colspan=<span class="number">3</span>/rowspan=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>Or use <strong>matplotlib.gridspec</strong>， making a grid shown as in the figure below</p>
-<div class="gallery 参数">
-              <p><img src="/storage/image/Figure_2.png" class="lazyload" data-srcset="/storage/image/Figure_2.png" srcset="data:image/png;base64,666" alt="gridspec"></p>
+<div class="gallery 更多图表分布">
+              <p><img src="/storage/image/numpy_Figure_2.png" class="lazyload" data-srcset="/storage/image/numpy_Figure_2.png" srcset="data:image/png;base64,666" alt="更多图表分布"></p>
             </div>
 
-<details using matplotlib.gridspec can do it><summary> 参数 </summary>
+<details using matplotlib.gridspec can do it><summary> matplotlib.gridspec code </summary>
               <div class="content">
               <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gsp</span><br><span class="line"></span><br><span class="line">gs = gsp.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>, :])</span><br><span class="line"></span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>, :<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>:, <span class="number">2</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">2</span>, <span class="number">1</span>]) <span class="comment"># or using 'ax2 = plt.subplot(gs[-1, 1])'</span></span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
               </div>
@@ -490,24 +483,13 @@ read pic –&gt; convert by PIL –&gt; save as another pic
 </tr>
 </tbody></table>
 <p>And what is the meaning of <green>x, y, z</green> in the plt.subplot(gs[x, y:z]) ?<br>Especially，<strong>‘，’ is a divider.</strong><br>The left part represents the index of row, and the right part represent the index of column. Swaping the left and right part can lead to a block rotate 90 degrees.</p>
-<h3 id="Supporte-Chinese"><a href="#Supporte-Chinese" class="headerlink" title="Supporte Chinese"></a>Supporte Chinese</h3><details font-family table><summary> 参数 </summary>
+<h4 id="Supporte-Chinese"><a href="#Supporte-Chinese" class="headerlink" title="Supporte Chinese"></a>Supporte Chinese</h4><details font-family table><summary> 中文字体 </summary>
               <div class="content">
               <table><thead><tr><th>fontproperties</th><th>中文字体</th></tr></thead><tbody><tr><td>Simhei</td><td>黑体</td></tr></tbody></table>
               </div>
             </details>
 
 
-
-
-
-<p><btn regular><a href="https://xaoxuu.com" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> 示例博客</a></btn></p>
-<h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details demo><summary> 参数 </summary>
-              <div class="content">
-              <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a =np.arange(<span class="number">0.0</span>,<span class="number">5.0</span>,<span class="number">0.02</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)   <span class="comment">#partition  and location</span></span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>])</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>) </span><br><span class="line">plt.plot(a,np.cos(<span class="number">2</span>*np.pi*a),<span class="string">"r,-"</span>)</span><br><span class="line">plt.ylabel(<span class="string">"Grade"</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-              </div>
-            </details>
-
-<h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script>
   
   
     
@@ -526,10 +508,10 @@ read pic –&gt; convert by PIL –&gt; save as another pic
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-14T12:25:15+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-17T23:52:44+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月14日</p>
+    <p>更新于：2020年10月17日</p>
   </a>
 </div>
 
@@ -581,9 +563,9 @@ read pic –&gt; convert by PIL –&gt; save as another pic
         </a>
       
       
-        <a class="next" href="/2020/09/24/javaScriptBase/">
-          <p class="title">javaScriptBase<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content">Variables and operations1prompt(hint,Preset/*string*/)--&gt;operate--&gt;alert()//Humanized progr...</p>
+        <a class="next" href="/2020/09/15/hello-world/">
+          <p class="title">Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
         </a>
       
     </div>
@@ -624,8 +606,8 @@ read pic –&gt; convert by PIL –&gt; save as another pic
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-represents-Pic"><span class="toc-text">Array represents Pic</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Matpotlib"><span class="toc-text">Matpotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Partition-and-location"><span class="toc-text">Partition and location</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Supporte-Chinese"><span class="toc-text">Supporte Chinese</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Folding-box"><span class="toc-text">Folding box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gist"><span class="toc-text">gist</span></a></li></ol>
-    </li></div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-represents-Pic"><span class="toc-text">Array represents Pic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Matpotlib"><span class="toc-text">Matpotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Partition-and-location"><span class="toc-text">Partition and location</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Supporte-Chinese"><span class="toc-text">Supporte Chinese</span></a></li></ol></li></ol>
+    </div>
   </section>
 
 
@@ -663,7 +645,7 @@ read pic –&gt; convert by PIL –&gt; save as another pic
     
       
         <div class="copyright">
-        <p><a href="/">© 2019-2020</a> by <a href="https://xaoxuu.com/wiki/volantis/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
+        <p><a href="/">© 2019-2020</a> by <a href="https://vlts.cc/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
 
         </div>
       
@@ -853,6 +835,61 @@ var loadCSS = function( href, before, media, attributes ){
   
 
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
 
 
 
@@ -1191,6 +1228,8 @@ document.addEventListener("pjax:success", listennSidebarTOC);
           pjax_scrollrebeal();
         
         
+        
+          pjax_initCopyCode();
         
         
         

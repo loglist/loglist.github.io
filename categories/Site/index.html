@@ -509,7 +509,7 @@
     <div class="content">
       <ul class="entry navigation">
         
-          <li><a class="flat-box" title="/categories/Code/" href="/categories/Code/" id="categoriesCode"><div class="name">Code</div><div class="badge">(3)</div></a></li>
+          <li><a class="flat-box" title="/categories/Code/" href="/categories/Code/" id="categoriesCode"><div class="name">Code</div><div class="badge">(2)</div></a></li>
         
           <li><a class="flat-box" title="/categories/Codelanguage/" href="/categories/Codelanguage/" id="categoriesCodelanguage"><div class="name">Codelanguage</div><div class="badge">(1)</div></a></li>
         
@@ -537,7 +537,7 @@
 
 
     <div class="content">
-      <a href="/tags/C/" style="font-size: 14px; color: #999">C#</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Js/" style="font-size: 14px; color: #999">Js</a> <a href="/tags/Numpy/" style="font-size: 14px; color: #999">Numpy</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a>
+      <a href="/tags/C/" style="font-size: 14px; color: #999">C#</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Numpy/" style="font-size: 14px; color: #999">Numpy</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a>
     </div>
   </section>
 
@@ -575,7 +575,7 @@
     
       
         <div class="copyright">
-        <p><a href="/">© 2019-2020</a> by <a href="https://xaoxuu.com/wiki/volantis/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
+        <p><a href="/">© 2019-2020</a> by <a href="https://vlts.cc/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
 
         </div>
       
@@ -765,6 +765,61 @@ var loadCSS = function( href, before, media, attributes ){
   
 
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
 
 
 
@@ -1103,6 +1158,8 @@ document.addEventListener("pjax:success", listennSidebarTOC);
           pjax_scrollrebeal();
         
         
+        
+          pjax_initCopyCode();
         
         
         

@@ -21,9 +21,11 @@
   
   <title>shell+ffmpeg批量转flac至wav的方法 - loglist</title>
   
-    <meta name="keywords" content="Shell,ffmpeg">
+    <meta name="keywords" content="Linux,Shell,ffmpeg">
   
 
+  
+    <meta name="description" content="前段时间搭建了H大个人网盘，配合适当的节点速度不错。其中有music文件夹放些无损歌曲，奈何苹果不支持.flac格式的音乐文件播放；所以想到用ffmepg转换歌曲格式。随着歌曲增多，如何智能地批量执行flac2wav成了需求。">
   
 
   <!-- feed -->
@@ -434,17 +436,43 @@
 
 
   
-  <p>前段时间搭建了<a href="https://loglist.github.io/2020/10/11/theErrorAboutInstallOlaindex/">H大</a>个人网盘，配合<red>适当的</red><a href="https://xn--mesr8b36x.com/#/register?code=aPPAoth1" target="_blank" rel="external nofollow noopener noreferrer">节点</a>速度不错。</p>
-<h3 id="button"><a href="#button" class="headerlink" title="button"></a>button</h3><p><btn regular><a href="https://xaoxuu.com" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> 示例博客</a></btn></p>
-<h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details 标题><summary> 参数 </summary>
-              <div class="content">
-              <p><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" srcset="data:image/png;base64,666" alt></p>
-              </div>
-            </details>
+  <p>前段时间搭建了<a href="https://loglist.github.io/2020/10/11/theErrorAboutInstallOlaindex/">H大</a>个人网盘，配合<red>适当的</red><a href="https://xn--mesr8b36x.com/#/register?code=aPPAoth1" target="_blank" rel="external nofollow noopener noreferrer">节点</a>速度不错。其中有<code>music</code>文件夹放些无损歌曲，奈何苹果不支持.flac格式的音乐文件播放；所以想到用<strong>ffmepg</strong>转换歌曲格式。随着歌曲增多，如何智能地批量执行flac2wav成了需求。</p>
+<a id="more"></a>
+<h3 id="批量flac2wav"><a href="#批量flac2wav" class="headerlink" title="批量flac2wav"></a>批量flac2wav</h3><p>这个实现起来还算容易，主要借助shell写一个bash脚本走一个循环即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> *.flac</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    ffmpeg -i i <span class="variable">$i</span>.wav</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>但是问题显而易见的，<strong>$i</strong>获取的文件名含拓展名，那么，从$i中提取出所需文字成为新的目标。</p>
+<h3 id="shell提取文字"><a href="#shell提取文字" class="headerlink" title="shell提取文字"></a>shell提取文字</h3><p>从以下文章可推知：shell提取文字大致分两种：</p>
+<div class="tag link"><a class="link-card" title="shell提取文字的一些方法" href="https://blog.csdn.net/ljianhui/article/details/43128465" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666"></div><div class="right"><p class="text">shell提取文字的一些方法</p><p class="url">https://blog.csdn.net/ljianhui/article/details/43128465</p></div></a></div>
 
-<h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script>
+<div class="tabs" id="tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">两种方法</a></li><li class="tab"><a class="#tab-id-2"># %</a></li><li class="tab"><a class="#tab-id-3">* $ {}</a></li><li class="tab"><a class="#tab-id-4">basename和dirname</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><ul>
+<li># % * $ {}符号提取文字</li>
+<li>shell关键字basename和dirname</li>
+</ul></div><div class="tab-pane" id="tab-id-2"><ul>
+<li>#：表示从左边算起第一个</li>
+<li>%：表示从右边算起第一个</li>
+<li>##：表示从左边算起最后一个</li>
+<li>%%：表示从右边算起最后一个</li>
+</ul></div><div class="tab-pane" id="tab-id-3"><ul>
+<li>${var%%x*}</li>
+<li>＊：表示删除</li>
+<li>起止位置由 <strong>%%x</strong> 表示：删除右边最后一个x，包含x的内容<ul>
+<li>%x时，*在x右边，其中<strong>x</strong>为目标位置</li>
+<li>#x时，*在x左边，写作 <strong>##*x</strong></li>
+</ul>
+</li>
+</ul></div><div class="tab-pane" id="tab-id-4"><p>没有使用，想着用嵌套#%*代替</p></div></div></div>
 
-<p><img src="/source/storage/image/icon/loglist.png" class="lazyload" data-srcset="/source/storage/image/icon/loglist.png" srcset="data:image/png;base64,666" alt></p>
+<p>于是，提取到文件名变得可行，就有</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="variable">$&#123;name%.*&#125;</span>  <span class="comment">#删掉右边第一个"."及"."，删掉拓展名</span></span><br><span class="line">name=<span class="variable">$&#123;name##*/&#125;</span> <span class="comment">#删掉左边最后一个"/"及"/"，删掉存储路径</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="转换过的需要跳过"><a href="#转换过的需要跳过" class="headerlink" title="转换过的需要跳过"></a>转换过的需要跳过</h3><p>批量flac2wav的问题似乎解决了，但又不是那么完整。比如：总不能每次将已经转换的文件再次转换吧？文件少时还好说，文件多时就要耗时了！<br>这个问题解决起来也容易，给转换过的歌曲建立列表。如果新的歌曲不再列表内，就转换；反之，则不转换。那么，就变成提<strong>取列表+转换前判断</strong>了。<br>已知的，我需要将wav格式的歌曲放在单独文件夹<em>wav</em>下，为了苹果设备的使用。就有：</p>
+<h4 id="已转换歌曲的目录"><a href="#已转换歌曲的目录" class="headerlink" title="已转换歌曲的目录"></a>已转换歌曲的目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array_songs=() <span class="comment">#建立空数组</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> ../wav/*.wav</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    name=<span class="variable">$&#123;name%.*&#125;</span> <span class="comment">#删掉拓展名</span></span><br><span class="line">    array_songs=(<span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>,<span class="variable">$&#123;name##*/&#125;</span>) <span class="comment">#删掉路径</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;array_songs[@]&#125;</span> <span class="comment">#打印数组所有元素</span></span><br></pre></td></tr></table></figure>
+<h4 id="判断是否转换"><a href="#判断是否转换" class="headerlink" title="判断是否转换"></a>判断是否转换</h4><p>  获取当前目录所有的<em>.flac</em>歌曲，并将每个名字与列表比对，就有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> *.flac</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">name=<span class="variable">$&#123;name%.*&#125;</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span> <span class="comment">#已转换时</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 已转换成wav"</span></span><br><span class="line"><span class="keyword">elif</span> [[ ! <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span> <span class="comment">#未转换时</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 正在转换成wav"</span></span><br><span class="line">    ffmpeg -i <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac"</span> <span class="string">"../mac/<span class="variable">$&#123;name%.*&#125;</span>.wav"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="让程序复用及人性化"><a href="#让程序复用及人性化" class="headerlink" title="让程序复用及人性化"></a>让程序复用及人性化</h3><p>如果没有提示语句，就会让程序生硬。如果没有程序复用，就显得冗余；所以使用了函数体。就有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">existSongsLine</span></span>()&#123; <span class="comment">#声明函数</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"==================================================="</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">addSongsLine</span></span>()&#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"+++++++++++++++++++++++++++++++++++++++++++++++++++"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">### 获取已转换的歌曲目录</span></span><br><span class="line"><span class="function"><span class="title">existSongs</span></span>()&#123;</span><br><span class="line">    array_songs=()</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> ../mac/*.wav</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        name=<span class="variable">$&#123;name%.*&#125;</span></span><br><span class="line">        array_songs=(<span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>,<span class="variable">$&#123;name##*/&#125;</span>)</span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">    existSongsLine</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$&#123;array_songs[@]&#125;</span>		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">array_songs=($(existSongs)) <span class="comment">#建立已转换歌曲的数组变量</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#判断是否有新的歌曲需要转换成wav</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> *.flac;<span class="keyword">do</span></span><br><span class="line"></span><br><span class="line">    name=<span class="variable">$&#123;name%.*&#125;</span></span><br><span class="line">    <span class="keyword">if</span> [[ <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">        existSongsLine</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 已转换成wav"</span></span><br><span class="line">    <span class="keyword">elif</span> [[ ! <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">        addSongsLine</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 正在转换成wav"</span></span><br><span class="line">        add=1</span><br><span class="line">        ffmpeg -i <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac"</span> <span class="string">"../mac/<span class="variable">$&#123;name%.*&#125;</span>.wav"</span></span><br><span class="line">        existSongsLine</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 已转换成wav"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#提示歌曲是否增加，其实还可以加入打印歌曲数量的功能</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$&#123;add&#125;</span> -eq 0 ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> -e <span class="string">"\n"</span></span><br><span class="line">    addSongsLine</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"没有要转换的flac歌曲"</span></span><br><span class="line">    addSongsLine</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打印已转换的歌曲</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\n已转换成wav的全部歌曲: "</span></span><br><span class="line">existSongs</span><br></pre></td></tr></table></figure>
+
+
 
   
   
@@ -464,10 +492,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-14T16:13:13+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-17T23:00:45+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月14日</p>
+    <p>更新于：2020年10月17日</p>
   </a>
 </div>
 
@@ -476,7 +504,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Shell/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Shell</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ffmpeg/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ffmpeg</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Shell/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Shell</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ffmpeg/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ffmpeg</p></a></div>
 
 
         
@@ -557,7 +585,7 @@
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#button"><span class="toc-text">button</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Folding-box"><span class="toc-text">Folding box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gist"><span class="toc-text">gist</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#批量flac2wav"><span class="toc-text">批量flac2wav</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell提取文字"><span class="toc-text">shell提取文字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换过的需要跳过"><span class="toc-text">转换过的需要跳过</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已转换歌曲的目录"><span class="toc-text">已转换歌曲的目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断是否转换"><span class="toc-text">判断是否转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#让程序复用及人性化"><span class="toc-text">让程序复用及人性化</span></a></li></ol>
     </div>
   </section>
 
@@ -596,7 +624,7 @@
     
       
         <div class="copyright">
-        <p><a href="/">© 2019-2020</a> by <a href="https://xaoxuu.com/wiki/volantis/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
+        <p><a href="/">© 2019-2020</a> by <a href="https://vlts.cc/tag-plugins/" target="_blank" rel="external nofollow noopener noreferrer">volantis 4</a></p>
 
         </div>
       
@@ -786,6 +814,61 @@ var loadCSS = function( href, before, media, attributes ){
   
 
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
 
 
 
@@ -1124,6 +1207,8 @@ document.addEventListener("pjax:success", listennSidebarTOC);
           pjax_scrollrebeal();
         
         
+        
+          pjax_initCopyCode();
         
         
         

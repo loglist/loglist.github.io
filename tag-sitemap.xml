@@ -3,36 +3,36 @@
 
 
     <url>
-        <loc>http://loglist.github.io/tags/ffmpeg/</loc>
-        <lastmod>2020-10-14T08:13:13.876Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Shell/</loc>
-        <lastmod>2020-10-14T08:13:13.876Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://loglist.github.io/tags/Numpy/</loc>
-        <lastmod>2020-10-14T04:25:15.529Z</lastmod>
+        <lastmod>2020-10-17T15:52:44.657Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/Python/</loc>
-        <lastmod>2020-10-14T04:25:15.529Z</lastmod>
+        <lastmod>2020-10-17T15:52:44.657Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/tags/Js/</loc>
-        <lastmod>2020-09-29T10:13:45.532Z</lastmod>
+        <loc>http://loglist.github.io/tags/ffmpeg/</loc>
+        <lastmod>2020-10-17T15:00:45.130Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Shell/</loc>
+        <lastmod>2020-10-17T15:00:45.130Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Linux/</loc>
+        <lastmod>2020-10-17T15:00:45.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
