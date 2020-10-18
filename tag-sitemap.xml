@@ -3,8 +3,22 @@
 
 
     <url>
+        <loc>http://loglist.github.io/tags/rss/</loc>
+        <lastmod>2020-10-18T18:01:00.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/%25E5%259B%25BE%25E5%25BA%258A/</loc>
+        <lastmod>2020-10-18T18:01:00.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/tags/C/</loc>
-        <lastmod>2020-10-18T06:54:31.675Z</lastmod>
+        <lastmod>2020-10-18T14:05:32.557Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

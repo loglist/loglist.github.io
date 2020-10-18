@@ -6,7 +6,7 @@
   <link href="http://loglist.github.io/atom.xml" rel="self"/>
   
   <link href="http://loglist.github.io/"/>
-  <updated>2020-10-18T06:04:44.036Z</updated>
+  <updated>2020-10-18T18:01:00.224Z</updated>
   <id>http://loglist.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo的jsdelivr+picgo图床与rss订阅</title>
+    <link href="http://loglist.github.io/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/"/>
+    <id>http://loglist.github.io/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/</id>
+    <published>2020-10-18T16:42:53.000Z</published>
+    <updated>2020-10-18T18:01:00.224Z</updated>
+    
+    <content type="html"><![CDATA[<p>个人非常喜欢rss订阅。它不仅收集信息方便快捷，而且筛选起来更容易；彷佛是个低配版的脚本一样。目前在用<a href="https://www.inoreader.com/" target="_blank" rel="external nofollow noopener noreferrer">inoreader</a>的免费版，配上<a href="https://docs.rsshub.app/" target="_blank" rel="external nofollow noopener noreferrer">万物均可rss</a>用着还行。所以，自己的博客不添加rss确实说不过去。</p><h3 id="添加rss订阅"><a href="#添加rss订阅" class="headerlink" title="添加rss订阅"></a>添加rss订阅</h3><p>从下面的文章不难推知添加rss订阅很简单：</p><div class="tag link"><a class="link-card" title="为Hexo添加RSS订阅" href="https://hasaik.com/posts/19c94341.html" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666"></div><div class="right"><p class="text">为Hexo添加RSS订阅</p><p class="url">https://hasaik.com/posts/19c94341.html</p></div></a></div><p>主要分三步：</p><ul><li>安装<code>npm install hexo-generator-feed --save</code></li><li>修改根目录<strong>_config.yml</strong><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#订阅RSS</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></li><li>修改主题目录<strong>_config.yml</strong><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#rss</span></span><br><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure>搞定！</li></ul><h3 id="jsdelivr限制50M？"><a href="#jsdelivr限制50M？" class="headerlink" title="jsdelivr限制50M？"></a>jsdelivr限制50M？</h3><p>jsdelivr+<a href="https://picgo.github.io/PicGo-Doc/" target="_blank" rel="external nofollow noopener noreferrer">picgo</a>建立免费图床早已熟稔，甚至于50M的限制也可以添加<code>tag</code>来突破。这里主要是介绍picgo的插件<strong>github-plus</strong>。有了它，你可以在本地更容易地管理github-repo内的图片。安装之后，再细说配置及使用要领。</p><p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo3.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo3.jpg" srcset="data:image/png;base64,666" alt="github-plus"><br>安装也易，就是点开插件设置-在图上空白位置输入<strong>github-plus</strong>，搜索后，点击install即可。</p><h4 id="github-plus配置"><a href="#github-plus配置" class="headerlink" title="github-plus配置"></a>github-plus配置</h4><p>配置也容易，麻烦点的就是申请token，寻着上面picgo-doc即可。<br><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo4.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo4.jpg" srcset="data:image/png;base64,666" alt="github-plus配置"></p><h4 id="github-plus的使用"><a href="#github-plus的使用" class="headerlink" title="github-plus的使用"></a>github-plus的使用</h4><p>关键点就在于<strong>Sync origin</strong>和<strong>Pull origin</strong>这两个按钮的使用了。</p><ul><li><p>Sync origin<br>同步本地的<code>data.json</code>至github的repo；即在本地相册点删除后，在插件设置点该按钮，即可删除在github-repo内的图片。</p></li><li><p>Pull origin<br>将github-repo内的图片信息同步至本地，可将缩略图显示在picgo的相册，如下图。</p><p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo2.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo2.jpg" srcset="data:image/png;base64,666" alt="picgo的相册"><br>相册显示需选择对应的图床，唯一遗憾的是相册右边的图片个数同步<del>有些迟钝</del>。</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;个人非常喜欢rss订阅。它不仅收集信息方便快捷，而且筛选起来更容易；彷佛是个低配版的脚本一样。目前在用&lt;a href=&quot;https://www.inoreader.com/&quot; target=&quot;_blank&quot; rel=&quot;external nofollow noopener n</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="http://loglist.github.io/categories/Hexo/"/>
+    
+    
+    <category term="图床" scheme="http://loglist.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="rss" scheme="http://loglist.github.io/tags/rss/"/>
+    
+  </entry>
   
   <entry>
     <title>shell+ffmpeg批量转flac至wav的方法</title>
@@ -128,9 +154,9 @@
     <link href="http://loglist.github.io/2020/03/24/cSharpBase/"/>
     <id>http://loglist.github.io/2020/03/24/cSharpBase/</id>
     <published>2020-03-24T13:10:47.000Z</published>
-    <updated>2020-10-18T06:54:31.675Z</updated>
+    <updated>2020-10-18T14:05:32.557Z</updated>
     
-    <content type="html"><![CDATA[<details blue><summary> class </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/class.html"><i class="fas fa-play-circle"></i> class</a></btn></p>              </div>            </details><a id="more"></a><details cyan><summary> base </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/base.html"><i class="fas fa-play-circle"></i> base</a></btn></p>              </div>            </details><details green><summary> method </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/method.html"><i class="fas fa-play-circle"></i> method</a></btn></p>              </div>            </details><details yellow><summary> constructor </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/constructor.html"><i class="fas fa-play-circle"></i> constructor</a></btn></p>              </div>            </details><details red><summary> operator </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/operator.html"><i class="fas fa-play-circle"></i> operator</a></btn></p>              </div>            </details>]]></content>
+    <content type="html"><![CDATA[<details blue><summary> class </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/class.html"><i class="fas fa-play-circle"></i> class</a></btn></p>              </div>            </details><a id="more"></a><details cyan><summary> base </summary>              <div class="content">              <p><btn regular><a href="https://cdn.jsdelivr.net/gh/loglist/img@master/base.html" target="_blank" rel="external nofollow noopener noreferrer"><i class="fas fa-play-circle"></i> base</a></btn></p>              </div>            </details><details green><summary> method </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/method.html"><i class="fas fa-play-circle"></i> method</a></btn></p>              </div>            </details><details yellow><summary> constructor </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/constructor.html"><i class="fas fa-play-circle"></i> constructor</a></btn></p>              </div>            </details><details red><summary> operator </summary>              <div class="content">              <p><btn regular><a href="/storage/html/csharp/operator.html"><i class="fas fa-play-circle"></i> operator</a></btn></p>              </div>            </details>]]></content>
     
     
     <summary type="html">&lt;details blue&gt;&lt;summary&gt; class &lt;/summary&gt;

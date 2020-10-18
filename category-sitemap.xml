@@ -8,8 +8,15 @@
     </url>
 
     <url>
+        <loc>http://loglist.github.io/categories/Hexo/</loc>
+        <lastmod>2020-10-18T18:01:00.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/categories/Code/</loc>
-        <lastmod>2020-10-18T06:54:31.675Z</lastmod>
+        <lastmod>2020-10-18T14:05:32.557Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

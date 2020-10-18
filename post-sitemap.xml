@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>http://loglist.github.io/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/</loc>
+        <lastmod>2020-10-18T18:01:00.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/2020/03/24/cSharpBase/</loc>
-        <lastmod>2020-10-18T06:54:31.675Z</lastmod>
+        <lastmod>2020-10-18T14:05:32.557Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
