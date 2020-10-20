@@ -3,15 +3,64 @@
 
 
     <url>
+        <loc>http://loglist.github.io/tags/css3/</loc>
+        <lastmod>2020-10-20T16:34:08.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/js/</loc>
+        <lastmod>2020-10-20T15:54:17.011Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/ffmpeg/</loc>
+        <lastmod>2020-10-19T08:55:13.145Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Shell/</loc>
+        <lastmod>2020-10-19T08:55:13.145Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Linux/</loc>
+        <lastmod>2020-10-19T08:55:13.145Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/tags/rss/</loc>
-        <lastmod>2020-10-19T04:46:31.421Z</lastmod>
+        <lastmod>2020-10-19T08:53:43.052Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/%25E5%259B%25BE%25E5%25BA%258A/</loc>
-        <lastmod>2020-10-19T04:46:31.421Z</lastmod>
+        <lastmod>2020-10-19T08:53:43.052Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Numpy/</loc>
+        <lastmod>2020-10-19T06:01:59.963Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Python/</loc>
+        <lastmod>2020-10-19T06:01:59.963Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -19,41 +68,6 @@
     <url>
         <loc>http://loglist.github.io/tags/C/</loc>
         <lastmod>2020-10-18T14:05:32.557Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/ffmpeg/</loc>
-        <lastmod>2020-10-18T06:04:44.036Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Shell/</loc>
-        <lastmod>2020-10-18T06:04:44.036Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Linux/</loc>
-        <lastmod>2020-10-18T06:04:44.036Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Numpy/</loc>
-        <lastmod>2020-10-17T15:52:44.657Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Python/</loc>
-        <lastmod>2020-10-17T15:52:44.657Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -129,6 +129,17 @@
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" id="archives">
+                  <i class="fas fa-archive fa-fw"></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" id="categories">
                   <i class="fas fa-folder-open fa-fw"></i>分类
                 </a>
@@ -142,17 +153,6 @@
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" id="tags">
                   <i class="fas fa-tags fa-fw"></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" id="archives">
-                  <i class="fas fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -250,6 +250,17 @@
               
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" id="archives">
+                  <i class="fas fa-archive fa-fw"></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" id="categories">
                   <i class="fas fa-folder-open fa-fw"></i>分类
                 </a>
@@ -263,17 +274,6 @@
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" id="tags">
                   <i class="fas fa-tags fa-fw"></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" id="archives">
-                  <i class="fas fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -489,7 +489,7 @@
 <p>于是，提取到文件名变得可行，就有</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="variable">$&#123;name%.*&#125;</span>  <span class="comment">#删掉右边第一个"."及"."，删掉拓展名</span></span><br><span class="line">name=<span class="variable">$&#123;name##*/&#125;</span> <span class="comment">#删掉左边最后一个"/"及"/"，删掉存储路径</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="转换过的需要跳过"><a href="#转换过的需要跳过" class="headerlink" title="转换过的需要跳过"></a>转换过的需要跳过</h3><p>批量flac2wav的问题似乎解决了，但又不是那么完整。比如：总不能每次将已经转换的文件再次转换吧？文件少时还好说，文件多时就要耗时了！<br>这个问题解决起来也容易，给转换过的歌曲建立列表。如果新的歌曲不再列表内，就转换；反之，则不转换。那么，就变成提<strong>取列表+转换前判断</strong>了。<br>已知的，我需要将wav格式的歌曲放在单独文件夹<em>wav</em>下，为了苹果设备的使用。就有：</p>
+<h3 id="转换过的需要跳过"><a href="#转换过的需要跳过" class="headerlink" title="转换过的需要跳过"></a>转换过的需要跳过</h3><p>批量flac2wav的问题似乎解决了，但又不是那么完整。比如：总不能每次将已经转换的文件再次转换吧？文件少时还好说，文件多时就要耗时了！<br>这个问题解决起来也容易，给转换过的歌曲建立列表。如果新的歌曲不再列表内，就转换；反之，则不转换。那么，就变成<strong>提取列表+转换前判断</strong>了。<br>已知的，我需要将wav格式的歌曲放在单独文件夹<em>wav</em>下，为了苹果设备的使用。就有：</p>
 <h4 id="已转换歌曲的目录"><a href="#已转换歌曲的目录" class="headerlink" title="已转换歌曲的目录"></a>已转换歌曲的目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array_songs=() <span class="comment">#建立空数组</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> ../wav/*.wav</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    name=<span class="variable">$&#123;name%.*&#125;</span> <span class="comment">#删掉拓展名</span></span><br><span class="line">    array_songs=(<span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>,<span class="variable">$&#123;name##*/&#125;</span>) <span class="comment">#删掉路径</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;array_songs[@]&#125;</span> <span class="comment">#打印数组所有元素</span></span><br></pre></td></tr></table></figure>
 <h4 id="判断是否转换"><a href="#判断是否转换" class="headerlink" title="判断是否转换"></a>判断是否转换</h4><p>  获取当前目录所有的<em>.flac</em>歌曲，并将每个名字与列表比对，就有：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> *.flac</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">name=<span class="variable">$&#123;name%.*&#125;</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span> <span class="comment">#已转换时</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 已转换成wav"</span></span><br><span class="line"><span class="keyword">elif</span> [[ ! <span class="string">"<span class="variable">$&#123;array_songs[@]&#125;</span>"</span>  =~ <span class="string">"<span class="variable">$&#123;name&#125;</span>"</span> ]]; <span class="keyword">then</span> <span class="comment">#未转换时</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac 正在转换成wav"</span></span><br><span class="line">    ffmpeg -i <span class="string">"<span class="variable">$&#123;name&#125;</span>.flac"</span> <span class="string">"../mac/<span class="variable">$&#123;name%.*&#125;</span>.wav"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
@@ -516,10 +516,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-18T14:04:44+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T16:55:13+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月18日</p>
+    <p>更新于：2020年10月19日</p>
   </a>
 </div>
 
@@ -565,9 +565,12 @@
   
     <div class="prev-next">
       
-        <a class="prev" href="/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/">
-          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>Hexo的jsdelivr+picgo图床与rss订阅</p>
-          <p class="content">个人非常喜欢rss订阅。它不仅收集信息方便快捷，而且筛选起来更容易；彷佛是个低配版的脚本一样。目前在用inoreader的免费版，配上万物均可rss用着还行。所以，自己的博客不添加rss确实说不...</p>
+        <a class="prev" href="/2020/10/18/JS%E6%9E%81%E7%AE%80%E7%AC%94%E8%AE%B0/">
+          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>JS极简笔记</p>
+          <p class="content">json基础
+json的变量声明
+JSON.stringify()，将json的object物件转换为json-string，但是方法会丢失
+JSON.parse()，将json-string转...</p>
         </a>
       
       
