@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -21,9 +19,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：Hexo - loglist</title>
+  <title>Jsdeivr限制50M怎么办 - loglist</title>
+  
+    <meta name="keywords" content="图床,picgo">
   
 
+  
+    <meta name="description" content="后来,我遇到了这个问题，尝试使用tag来解决。诚然，每逢50M打上tag-release之后的包jsdeivr会进行cdn加速，而且也不会被删除。">
   
 
   <!-- feed -->
@@ -360,7 +362,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class="cover-wrapper  search" style="display: none;">
+        <div id="full" class="cover-wrapper post search" style="display: none;">
           
             <div class="cover-bg lazyload placeholder" data-bg></div>
           
@@ -399,123 +401,193 @@
       <div class="body-wrapper" id="pjax-container">
         
 
-
 <div class="l_main">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        Jsdeivr限制50M怎么办
+      </h1>
+      <div class="new-meta-box">
         
           
+            
+<div class="new-meta-item author">
+  <a class="author" href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/loglist/loglist.github.io@master/storage/image/favicon/favicon-16x16.png">
+    <p>H大</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title">
-      <a href="/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/">
-        Hexo的jsdelivr+picgo图床与rss订阅
-      </a>
-    </h2>
-  
-  <div class="md">
-    
-      <p>个人非常喜欢rss订阅。它不仅收集信息方便快捷，而且筛选起来更容易；彷佛是个低配版的脚本一样。目前在用<a href="https://www.inoreader.com/" target="_blank" rel="external nofollow noopener noreferrer">inoreader</a>的免费版，配上<a href="https://docs.rsshub.app/" target="_blank" rel="external nofollow noopener noreferrer">万物均可rss</a>用着还行。所以，自己的博客不添加rss确实说不过去。</p>
-    
+          
+            
+  <div class="new-meta-item category">
+    <a class="notlink">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Site/">Site</a>
+    </a>
   </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
+
+
+          
         
-        <time>2020-10-19</time>
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年10月26日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Hexo/">Hexo</a>
+          
+            
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>后来,我遇到了这个问题，尝试使用tag来解决。诚然，每逢50M打上tag-release之后的包jsdeivr会进行cdn加速，而且也<span class="p red">不会被删除</span>。</p>
+<a id="more"></a>
+<p>但是，在从master转成v1【tag】这段时间内，你仍需要用master作为路径，<strong>总不能写一篇文章tag一次吧</strong>——也不是不行。</p>
+<h3 id="需要做什么"><a href="#需要做什么" class="headerlink" title="需要做什么"></a>需要做什么</h3><p>利用piggo+github-plus方便地管理本地与github-repo端的图片内容一致。这个前提下，遇到“Package size exceeded the configured limit of 50 MB.”这个情况，你就可以将这张图片之前的所有图片tag出去。</p>
+<h3 id="还要怎么做"><a href="#还要怎么做" class="headerlink" title="还要怎么做"></a>还要怎么做</h3><p>为了接着使用master分支，除非你能在网页端建立一个<strong>空分支</strong>，接着用github-plus插件在本地删掉相册里的图片。之后，利用github-plus的Sync Origin将删除图片的行为同步至github-repo端。这似乎已经完成了！但，在开始之前，你仍需要pull origin一下，<strong>保证两端的一致性</strong>。</p>
+<h3 id="还能做些什么"><a href="#还能做些什么" class="headerlink" title="还能做些什么"></a>还能做些什么</h3><p>tag出去的图片包均能正常显示，接下来就是更换旧文章里的图片路径了，这似乎很头疼？不，借助vscode可以在_post里直接替换master字样，<kbd>Crtl</kbd>+<kbd>H</kbd>并一次性替换。<psw>这世间还有什么能比愉快地白嫖更令我感激涕零？</psw></p>
+<h3 id="似乎没有了"><a href="#似乎没有了" class="headerlink" title="似乎没有了"></a>似乎没有了</h3><p>这几天用picgo的时候，总是遇到这样那样的问题！我打开picgo日志，找了issue，原因可能在于网络问题，or代理问题？</p>
+<ul>
+<li>reason: read ECONNRESET</li>
+<li>reason: connect ETIMEDOUT</li>
+<li>···</li>
+</ul>
+<p>我尝试用proxifier+关掉picgo的代理，后面补上是否可行。对了，用proxifier代理后，localhost的地址可能不是<a href="http://127.0.0.1/" target="_blank" rel="external nofollow noopener noreferrer">http://127.0.0.1/</a> 。具体是什么，可以用终端随便ping一个网址，有可能是<psw>http://127.8.0.1:4000/</psw>。<br><br><psw>没有工作在家赋闲</psw></p>
+
+  
+  
+    
+    <div class="footer">
       
-        <div>
-          <a class="readmore" href="/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/">
-            阅读全文
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-26T22:46:38+08:00">
+  <a class="notlink">
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年10月26日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>图床</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/picgo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>picgo</p></a></div>
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class="next" href="/2020/10/26/%E5%A6%82%E4%BD%95%E6%9F%A5%E6%89%BEgoogle-analytics-key/">
+          <p class="title">如何查找新版google_analytics_key<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">最近持续更新前端开发的笔记，希望自己能转型成功；或者将来能从事BIM与react相互交叉的工作。于是，想看一下自己某篇博客的点击量，奈何google_analytics中验证key并不识别。
+
+...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class="fas fa-comments"></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class="l_side">
   
   
     
     
-  
 
-  <section class="widget category shadow desktop">
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div">
     
   <header>
     
-      <a href="/blog/categories/"><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class="name">分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">目录</span>
     
   </header>
 
 
     <div class="content">
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box" title="/categories/Code/" href="/categories/Code/" id="categoriesCode"><div class="name">Code</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Hexo/" href="/categories/Hexo/" id="categoriesHexo"><div class="name">Hexo</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Site/" href="/categories/Site/" id="categoriesSite"><div class="name">Site</div><div class="badge">(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href="/blog/tags/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <a href="/tags/C/" style="font-size: 14px; color: #999">C#</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Numpy/" style="font-size: 14px; color: #999">Numpy</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/css3/" style="font-size: 14px; color: #999">css3</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/js/" style="font-size: 14px; color: #999">js</a> <a href="/tags/rss/" style="font-size: 14px; color: #999">rss</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px; color: #999">图床</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要做什么"><span class="toc-text">需要做什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还要怎么做"><span class="toc-text">还要怎么做</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还能做些什么"><span class="toc-text">还能做些什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#似乎没有了"><span class="toc-text">似乎没有了</span></a></li></ol>
     </div>
   </section>
 
@@ -526,6 +598,7 @@
 </aside>
 
 
+
         
         
           <!--此文件用来存放一些不方便取值的变量-->
@@ -533,8 +606,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Jsdeivr限制50M怎么办";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -926,7 +999,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
+<!-- <script>
 setTimeout(function() {
   window.ga_tid = 'G-ZG46Y0LMK7';
    (function() {
@@ -936,7 +1009,18 @@ setTimeout(function() {
 	  s.parentNode.insertBefore(dga, s);
   })();
 }, 5000);
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG46Y0LMK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZG46Y0LMK7');
 </script>
+
 
 
 

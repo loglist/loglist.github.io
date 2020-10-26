@@ -21,7 +21,7 @@
   
   <title>Hexo的jsdelivr+picgo图床与rss订阅 - loglist</title>
   
-    <meta name="keywords" content="图床,rss">
+    <meta name="keywords" content="图床,rss,kills,picgo">
   
 
   
@@ -432,7 +432,7 @@
   <div class="new-meta-item category">
     <a class="notlink">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Hexo/">Hexo</a>
+      <a class="category-link" href="/categories/Site/">Site</a>
     </a>
   </div>
 
@@ -471,15 +471,15 @@
 <li>修改主题目录<strong>_config.yml</strong><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#rss</span></span><br><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure>
 搞定！<a href="https://loglist.github.io/atom.xml">试一下</a>吧！</li>
 </ul>
-<h3 id="jsdelivr限制50M？"><a href="#jsdelivr限制50M？" class="headerlink" title="jsdelivr限制50M？"></a>jsdelivr限制50M？</h3><p>jsdelivr+<a href="https://picgo.github.io/PicGo-Doc/" target="_blank" rel="external nofollow noopener noreferrer">picgo</a>建立免费图床早已熟稔，甚至于50M的限制也可以添加<code>tag</code>来突破。这里主要是介绍picgo的插件<strong>github-plus</strong>。有了它，你可以在本地更容易地管理github-repo内的图片。安装之后，再细说配置及使用要领。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo3.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo3.jpg" srcset="data:image/png;base64,666" alt="github-plus"><br>安装也易，就是点开插件设置-在图上空白位置输入<strong>github-plus</strong>，搜索后，点击install即可。</p>
-<h4 id="github-plus配置"><a href="#github-plus配置" class="headerlink" title="github-plus配置"></a>github-plus配置</h4><p>配置也容易，麻烦点的就是申请token，寻着上面picgo-doc即可。<br><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo4.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo4.jpg" srcset="data:image/png;base64,666" alt="github-plus配置"></p>
+<h3 id="jsdelivr限制50M？"><a href="#jsdelivr限制50M？" class="headerlink" title="jsdelivr限制50M？"></a>jsdelivr限制50M？</h3><p>jsdelivr+<a href="https://picgo.github.io/PicGo-Doc/" target="_blank" rel="external nofollow noopener noreferrer">picgo</a>建立免费图床早已熟稔，甚至于50M的限制也可以添加<code>tag</code>来<a href="https://loglist.github.io/2020/10/26/Jsdeivr限制50M后怎么办/">突破</a>。这里主要是介绍picgo的插件<strong>github-plus</strong>。有了它，你可以在本地更容易地管理github-repo内的图片。安装之后，再细说配置及使用要领。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo3.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo3.jpg" srcset="data:image/png;base64,666" alt="github-plus"><br>安装也易，就是点开插件设置-在图上空白位置输入<strong>github-plus</strong>，搜索后，点击install即可。</p>
+<h4 id="github-plus配置"><a href="#github-plus配置" class="headerlink" title="github-plus配置"></a>github-plus配置</h4><p>配置也容易，麻烦点的就是申请token，寻着上面picgo-doc即可。<br><img src="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo4.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo4.jpg" srcset="data:image/png;base64,666" alt="github-plus配置"></p>
 <h4 id="github-plus的使用"><a href="#github-plus的使用" class="headerlink" title="github-plus的使用"></a>github-plus的使用</h4><p>关键点就在于<strong>Sync origin</strong>和<strong>Pull origin</strong>这两个按钮的使用了。</p>
 <ul>
 <li><p>Sync origin<br>同步本地的<code>data.json</code>至github的repo；即在本地相册点删除后，在插件设置点该按钮，即可删除在github-repo内的图片。</p>
 </li>
 <li><p>Pull origin<br>将github-repo内的图片信息同步至本地，可将缩略图显示在picgo的相册，如下图。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo2.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/picgo2.jpg" srcset="data:image/png;base64,666" alt="picgo的相册"><br>相册显示需选择对应的图床，唯一遗憾的是相册右边的图片个数同步<del>有些迟钝</del>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo2.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@0.1/picgo2.jpg" srcset="data:image/png;base64,666" alt="picgo的相册"><br>相册显示需选择对应的图床，唯一遗憾的是相册右边的图片个数同步<del>有些迟钝</del>。</p>
 </li>
 </ul>
 
@@ -501,10 +501,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T16:53:43+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-26T22:07:17+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月19日</p>
+    <p>更新于：2020年10月26日</p>
   </a>
 </div>
 
@@ -513,7 +513,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>图床</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/rss/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>rss</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>图床</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/rss/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>rss</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/kills/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>kills</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/picgo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>picgo</p></a></div>
 
 
         
@@ -556,12 +556,9 @@
         </a>
       
       
-        <a class="next" href="/2020/10/18/JS%E6%9E%81%E7%AE%80%E7%AC%94%E8%AE%B0/">
-          <p class="title">JS极简笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content">json基础
-json的变量声明
-JSON.stringify()，将json的object物件转换为json-string，但是方法会丢失
-JSON.parse()，将json-string转...</p>
+        <a class="next" href="/2020/10/14/shell-ffmpeg%E6%89%B9%E9%87%8F%E8%BD%ACflac%E8%87%B3wav%E7%9A%84%E6%96%B9%E6%B3%95/">
+          <p class="title">shell+ffmpeg批量转flac至wav的方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">前段时间搭建了H大个人网盘，配合适当的节点速度不错。其中有music文件夹放些无损歌曲，奈何苹果不支持.flac格式的音乐文件播放；所以想到用ffmepg转换歌曲格式。随着歌曲增多，如何智能地批...</p>
         </a>
       
     </div>
@@ -1014,7 +1011,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
+<!-- <script>
 setTimeout(function() {
   window.ga_tid = 'G-ZG46Y0LMK7';
    (function() {
@@ -1024,7 +1021,18 @@ setTimeout(function() {
 	  s.parentNode.insertBefore(dga, s);
   })();
 }, 5000);
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG46Y0LMK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZG46Y0LMK7');
 </script>
+
 
 
 

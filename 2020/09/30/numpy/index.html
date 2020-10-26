@@ -465,7 +465,7 @@
 
 <h3 id="Matpotlib"><a href="#Matpotlib" class="headerlink" title="Matpotlib"></a>Matpotlib</h3><h4 id="Partition-and-location"><a href="#Partition-and-location" class="headerlink" title="Partition and location"></a>Partition and location</h4><p>If I need more than one figure, how can I make it? Just like the figure below.</p>
 <div class="gallery 图表上下分布">
-              <p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/numpy_Figure_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/numpy_Figure_1.png" srcset="data:image/png;base64,666" alt="图表上下分布"></p>
+              <p><img src="https://cdn.jsdelivr.net/gh/loglist/img@0.1/numpy_Figure_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@0.1/numpy_Figure_1.png" srcset="data:image/png;base64,666" alt="图表上下分布"></p>
             </div>
 
 <details using plt.subplot can do it><summary> plt.subplot code </summary>
@@ -478,7 +478,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">0</span>),colspan=<span class="number">3</span>/rowspan=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>Or use <strong>matplotlib.gridspec</strong>， making a grid shown as in the figure below</p>
 <div class="gallery 更多图表分布">
-              <p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/numpy_Figure_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/numpy_Figure_2.png" srcset="data:image/png;base64,666" alt="更多图表分布"></p>
+              <p><img src="https://cdn.jsdelivr.net/gh/loglist/img@0.1/numpy_Figure_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@0.1/numpy_Figure_2.png" srcset="data:image/png;base64,666" alt="更多图表分布"></p>
             </div>
 
 <details using matplotlib.gridspec can do it><summary> matplotlib.gridspec code </summary>
@@ -532,10 +532,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T14:01:59+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-26T21:35:42+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月19日</p>
+    <p>更新于：2020年10月26日</p>
   </a>
 </div>
 
@@ -587,9 +587,12 @@
         </a>
       
       
-        <a class="next" href="/2020/09/15/hello-world/">
-          <p class="title">Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        <a class="next" href="/2020/03/25/aNewWayToSyncSourceCodeOfHexo/">
+          <p class="title">A New Way To Sync SourceCode Of Hexo<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">I never give up finding a way to update my blog conveniently. 
+
+
+Let me upsetThanks for GitHub pa...</p>
         </a>
       
     </div>
@@ -1042,7 +1045,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
+<!-- <script>
 setTimeout(function() {
   window.ga_tid = 'G-ZG46Y0LMK7';
    (function() {
@@ -1052,7 +1055,18 @@ setTimeout(function() {
 	  s.parentNode.insertBefore(dga, s);
   })();
 }, 5000);
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG46Y0LMK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZG46Y0LMK7');
 </script>
+
 
 
 

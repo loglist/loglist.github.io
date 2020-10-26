@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -19,16 +21,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>JS极简笔记 - loglist</title>
-  
-    <meta name="keywords" content="js">
+  <title>归档：2020/10 - loglist</title>
   
 
-  
-    <meta name="description" content="json基础
-json的变量声明
-JSON.stringify()，将json的object物件转换为json-string，但是方法会丢失
-JSON.parse()，将json-string转换为json-object">
   
 
   <!-- feed -->
@@ -365,7 +360,7 @@ JSON.parse()，将json-string转换为json-object">
     <div id="l_cover">
   
     
-        <div id="full" class="cover-wrapper post search" style="display: none;">
+        <div id="full" class="cover-wrapper  search" style="display: none;">
           
             <div class="cover-bg lazyload placeholder" data-bg></div>
           
@@ -405,225 +400,126 @@ JSON.parse()，将json-string转换为json-object">
         
 
 <div class="l_main">
-  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  
-
-
-  
-  <div class="article-meta" id="top">
+	
+		
+  <section class="post-list">
     
     
-    
-      <h1 class="title">
-        JS极简笔记
-      </h1>
-      <div class="new-meta-box">
+      
         
-          
-            
-<div class="new-meta-item author">
-  <a class="author" href="/" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/loglist/loglist.github.io@master/storage/image/favicon/favicon-16x16.png">
-    <p>H大</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class="new-meta-item category">
-    <a class="notlink">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Code/">Code</a>
-    </a>
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title">
+      <a href="/2020/10/11/theErrorAboutInstallOlaindex/">
+        theErrorAboutInstallOlaindex
+      </a>
+    </h2>
+  
+  <div class="md">
+    
+      <h3 id="theErrorCameFrome"><a href="#theErrorCameFrome" class="headerlink" title="theErrorCameFrome"></a>theErrorCameFrome</h3><p>I came across <a href="https://github.com/WangNingkai/OLAINDEX" target="_blank" rel="external nofollow noopener noreferrer">this project</a>  by chance. By this project, i can browse document( like video, pdf, pic and so on) easily.</p>
+    
   </div>
-
-
-          
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
         
-          
-            <div class="new-meta-item date">
-  <a class="notlink">
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年10月18日</p>
-  </a>
+        <time>2020-10-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Site/">Site</a>
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2020/10/11/theErrorAboutInstallOlaindex/">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
 </div>
 
-          
+          </div>
         
-          
-            
-
-          
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        
+          <a class="prev" rel="prev" href="/archives/2020/10/">
+            <section class="post prev white-box shadow">
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+            </section>
+          </a>
+        
+        <p class="current">
+          2 / 2
+        </p>
         
       </div>
     
-  </div>
-
-
-  
-  <h3 id="json基础"><a href="#json基础" class="headerlink" title="json基础"></a>json基础</h3><ul>
-<li>json的变量声明</li>
-<li>JSON.stringify()，将json的object物件转换为json-string，<span class="p red">但是方法会丢失</span></li>
-<li>JSON.parse()，将json-string转换为json-object<a id="more"></a>
-<details green><summary> json demo与源码 </summary>
-              <div class="content">
-              <div class="tabs" id="01"><ul class="nav-tabs"><li class="tab active"><a class="#01-1">demo</a></li><li class="tab"><a class="#01-2">源码</a></li></ul><div class="tab-content"><div class="tab-pane active" id="01-1"><p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master/js_json%E5%9F%BA%E7%A1%80.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master/js_json%E5%9F%BA%E7%A1%80.jpg" srcset="data:image/png;base64,666" alt="json基础运行"></p></div><div class="tab-pane" id="01-2"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>json 基础教学<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> point=&#123; <span class="comment">//json定义一个point物件</span></span></span><br><span class="line"><span class="actionscript">            <span class="string">"x"</span>:<span class="number">3</span>,</span></span><br><span class="line"><span class="actionscript">            <span class="string">"y"</span>:<span class="number">4</span>,</span></span><br><span class="line"><span class="actionscript">            <span class="string">"get"</span>:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">                alert(<span class="keyword">this</span>.x+<span class="string">","</span>+<span class="keyword">this</span>.y)</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"><span class="actionscript">        <span class="comment">// point.get();</span></span></span><br><span class="line"></span><br><span class="line">        /*网络传输需要将物件Object转化为json字符串，stringify()函数</span><br><span class="line"><span class="actionscript">        当然也是有丢失的，如<span class="keyword">get</span>()方法丢失。</span></span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> jsonStr=<span class="built_in">JSON</span>.stringify(point)</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">//json字符串可以重新转化为json物件，parse()函数 ，其中，parse .v 分开</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(jsonStr)<span class="comment">//传入var</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        plainObject=<span class="built_in">JSON</span>.parse(jsonStr)</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(plainObject)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div></div></div>
-              </div>
-            </details>
-
-</li>
-</ul>
-<span class="btn"><a class="button" href="/storage/html/jscode/json.html" title="运行一下"><i class="fas fa-terminal"></i>运行一下</a></span>
-
-
-<h3 id="JS-hoisting宣告提升"><a href="#JS-hoisting宣告提升" class="headerlink" title="JS-hoisting宣告提升"></a>JS-hoisting宣告提升</h3><h4 id="变量的宣告提升"><a href="#变量的宣告提升" class="headerlink" title="变量的宣告提升"></a>变量的宣告提升</h4><p>js-hoisting被称为宣告提升，<strong>宣告提升</strong>仅限于类似<code>var x</code>的单条语句。</p>
-<details green><summary> JS-hoisting造成运行结果一致 </summary>
-              <div class="content">
-              <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> x;</span></span><br><span class="line">    x = 10;</span><br><span class="line">    alert(x);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>与<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    x = 10;</span><br><span class="line">    alert(x);</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> x;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>以上两块代码的运行结果是一致的，均弹出**10**；
-              </div>
-            </details>
-
-<p>原因在于，JavaScript的渲染引擎具备<strong>宣告提升</strong>的特质。</p>
-<details red><summary> 宣告提升仅限于类似"var x"的单条语句 </summary>
-              <div class="content">
-              <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// x = 10;</span></span></span><br><span class="line">    alert(x);</span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> x = <span class="number">10</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>运行结果为弹出**undefined**
-              </div>
-            </details>
-
-<p>原因在于，<code>var x = 10;</code>对于js引擎来说是两个语句，即<code>var x; x = 10;</code> 。js引擎只对<code>var x;</code>该语句提升。</p>
-<h4 id="函数的宣告提升"><a href="#函数的宣告提升" class="headerlink" title="函数的宣告提升"></a>函数的宣告提升</h4><details green><summary> js引擎只对"var sayhello();"语句宣告提升 </summary>
-              <div class="content">
-              <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    sayhello();</span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">sayhello</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"hello"</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>与<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    sayhello();</span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> sayhello = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"hello"</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>以上两块代码的运行结果是不一致的，前者弹出**hello**,后者无弹出。
-              </div>
-            </details>
-<p>原因在于，<code>var sayhello = function ()</code>对js引擎类似于两个语句，<code>var sayhello();function sayhello(){···};</code>。js引擎只对<code>var sayhello();</code>语句宣告提升。</p>
-<h3 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a>addEventListener</h3><p>连接交互动作（js内置的动作）与函数</p>
-<details green><summary> addEventListener变化的图形 </summary>
-              <div class="content">
-              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">"box"</span>);</span><br><span class="line">    <span class="comment">//监听事件</span></span><br><span class="line">    box.addEventListener(<span class="string">"mouseover"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.style.opacity = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.height = <span class="string">'300px'</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.width = <span class="string">'50px'</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.backgroundColor = <span class="string">'blue'</span>;<span class="comment">//color改变需要加引号</span></span><br><span class="line">        <span class="keyword">this</span>.style.borderRadius = <span class="string">'5px'</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.boxShadow = <span class="string">'2px 2px 6px blue'</span>;</span><br><span class="line">    &#125;)</span><br><span class="line">    box.addEventListener(<span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.style.opacity = <span class="number">0.5</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.height = <span class="string">'150px'</span>;<span class="comment">//px去掉</span></span><br><span class="line">        <span class="keyword">this</span>.style.width = <span class="string">'150px'</span>;</span><br><span class="line">        <span class="comment">//js对应的属性中由'-'的，去掉'-',变为'-'的首字母大写</span></span><br><span class="line">        <span class="keyword">this</span>.style.backgroundColor = <span class="string">"blue"</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.borderRadius = <span class="string">"50%"</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.boxShadow = <span class="string">'0px 0px 0px '</span>;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> circle = <span class="built_in">document</span>.getElementById(<span class="string">"circle"</span>)</span><br><span class="line">    circle.addEventListener(<span class="string">"mouseover"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.style.borderRadius = <span class="string">"0"</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.backgroundColor = <span class="string">"yellow"</span></span><br><span class="line">    &#125;)</span><br><span class="line">    circle.addEventListener(<span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.style.borderRadius = <span class="string">"50%"</span>;</span><br><span class="line">        <span class="keyword">this</span>.style.backgroundColor = <span class="string">"purple"</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-              </div>
-            </details>
-
-<span class="btn 样式参数（可选）"><a class="button" href="/storage/html/csscode/css-transition.html" title="运行一下"><i class="fas fa-terminal"></i>运行一下</a></span>
-  
-  
-    
-    <div class="footer">
-      
-      
-      
-      
-    </div>
-  
-  
-    
-
-
-  <div class="article-meta" id="bottom">
-    <div class="new-meta-box">
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-20T23:54:17+08:00">
-  <a class="notlink">
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月20日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-  </div>
-
-
-  
   
 
-  
-    <div class="prev-next">
-      
-        <a class="prev" href="/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/">
-          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>Hexo的jsdelivr+picgo图床与rss订阅</p>
-          <p class="content">个人非常喜欢rss订阅。它不仅收集信息方便快捷，而且筛选起来更容易；彷佛是个低配版的脚本一样。目前在用inoreader的免费版，配上万物均可rss用着还行。所以，自己的博客不添加rss确实说不...</p>
-        </a>
-      
-      
-        <a class="next" href="/2020/10/14/shell-ffmpeg%E6%89%B9%E9%87%8F%E8%BD%ACflac%E8%87%B3wav%E7%9A%84%E6%96%B9%E6%B3%95/">
-          <p class="title">shell+ffmpeg批量转flac至wav的方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content">前段时间搭建了H大个人网盘，配合适当的节点速度不错。其中有music文件夹放些无损歌曲，奈何苹果不支持.flac格式的音乐文件播放；所以想到用ffmepg转换歌曲格式。随着歌曲增多，如何智能地批...</p>
-        </a>
-      
-    </div>
-  
-</article>
 
-
-  
-
-  <article class="post white-box reveal shadow" id="comments">
-    <p ct><i class="fas fa-comments"></i> 评论</p>
-    
-    <div id="gitalk-container"></div>
-
-  </article>
-
-
-
-
-
-
+	
 </div>
 <aside class="l_side">
   
   
     
     
+  
 
-
-
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div">
+  <section class="widget category shadow desktop">
     
   <header>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">目录</span>
+      <a href="/blog/categories/"><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class="name">分类</span></a>
     
   </header>
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#json基础"><span class="toc-text">json基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-hoisting宣告提升"><span class="toc-text">JS-hoisting宣告提升</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#变量的宣告提升"><span class="toc-text">变量的宣告提升</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数的宣告提升"><span class="toc-text">函数的宣告提升</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#addEventListener"><span class="toc-text">addEventListener</span></a></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box" title="/categories/Code/" href="/categories/Code/" id="categoriesCode"><div class="name">Code</div><div class="badge">(6)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Site/" href="/categories/Site/" id="categoriesSite"><div class="name">Site</div><div class="badge">(6)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href="/blog/tags/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门</span></a>
+    
+  </header>
+
+
+    <div class="content">
+      <a href="/tags/C/" style="font-size: 14px; color: #999">C#</a> <a href="/tags/Hexo/" style="font-size: 19px; color: #777">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Numpy/" style="font-size: 14px; color: #999">Numpy</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/css3/" style="font-size: 14px; color: #999">css3</a> <a href="/tags/ffmpeg/" style="font-size: 14px; color: #999">ffmpeg</a> <a href="/tags/google-analytics-key/" style="font-size: 14px; color: #999">google_analytics_key</a> <a href="/tags/js/" style="font-size: 14px; color: #999">js</a> <a href="/tags/kills/" style="font-size: 24px; color: #555">kills</a> <a href="/tags/picgo/" style="font-size: 19px; color: #777">picgo</a> <a href="/tags/react/" style="font-size: 14px; color: #999">react</a> <a href="/tags/rss/" style="font-size: 14px; color: #999">rss</a> <a href="/tags/volantis/" style="font-size: 14px; color: #999">volantis</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 19px; color: #777">图床</a> <a href="/tags/%E6%9E%81%E7%AE%80/" style="font-size: 24px; color: #555">极简</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 19px; color: #777">笔记</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 14px; color: #999">网盘</a>
     </div>
   </section>
 
@@ -634,7 +530,6 @@ JSON.parse()，将json-string转换为json-object">
 </aside>
 
 
-
         
         
           <!--此文件用来存放一些不方便取值的变量-->
@@ -642,8 +537,8 @@ JSON.parse()，将json-string转换为json-object">
 
 <script>
   window.pdata={}
-  pdata.ispage=true;
-  pdata.postTitle="JS极简笔记";
+  pdata.ispage=false;
+  pdata.postTitle="";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -1035,7 +930,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
+<!-- <script>
 setTimeout(function() {
   window.ga_tid = 'G-ZG46Y0LMK7';
    (function() {
@@ -1045,7 +940,18 @@ setTimeout(function() {
 	  s.parentNode.insertBefore(dga, s);
   })();
 }, 5000);
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG46Y0LMK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZG46Y0LMK7');
 </script>
+
 
 
 

@@ -466,6 +466,8 @@
 <h3 id="Let-me-upset"><a href="#Let-me-upset" class="headerlink" title="Let me upset"></a>Let me upset</h3><p>Thanks for GitHub pages and Hexo, you could read this page. However, in the past few years, I always spent too much time backing up the source code because of changing different computers in different places, which let me upset. I never give up finding a way to update my blog conveniently. </p>
 <p>I used to manage the source code by git which I could push my source code to a branch of the repository on Github. And at the new place, I could download the code by git-clone. Unfortunately, I always took too much time to configure the ssh-key until it could work successfully. It doesn’t work for me, and I think it is high time to give up the old way!</p>
 <h3 id="No-comma-why"><a href="#No-comma-why" class="headerlink" title="No comma, why?"></a>No comma, why?</h3><p>I build the site in Onedrive. This sounds great! Of course, I also need to install Git, Nodejs on the new computer; that’s all. <del>~ Why is there no comma in English? ~</del> The only thing I have to do in terms of configuration is adding the path of hexo-cli to my computer’s environment variable. The path of hexo-cli is just like this:<br><blue>C:\Users\Administrator\OneDrive\loglist\node_modules\hexo\bin</blue></p>
+<h3 id="And-Then"><a href="#And-Then" class="headerlink" title="And Then"></a>And Then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>start!!!</p>
 
   
   
@@ -485,10 +487,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-25T18:16:09+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-23T16:14:23+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年3月25日</p>
+    <p>更新于：2020年10月23日</p>
   </a>
 </div>
 
@@ -534,9 +536,9 @@
   
     <div class="prev-next">
       
-        <a class="prev" href="/2020/09/15/hello-world/">
-          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
-          <p class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        <a class="prev" href="/2020/09/30/numpy/">
+          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>numpy</p>
+          <p class="content">Array represents Picneed to install a third party library, pip install pillow, read pic --> conve...</p>
         </a>
       
       
@@ -593,7 +595,7 @@
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-me-upset"><span class="toc-text">Let me upset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#No-comma-why"><span class="toc-text">No comma, why?</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-me-upset"><span class="toc-text">Let me upset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#No-comma-why"><span class="toc-text">No comma, why?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-Then"><span class="toc-text">And Then</span></a></li></ol>
     </div>
   </section>
 
@@ -1005,7 +1007,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
+<!-- <script>
 setTimeout(function() {
   window.ga_tid = 'G-ZG46Y0LMK7';
    (function() {
@@ -1015,7 +1017,18 @@ setTimeout(function() {
 	  s.parentNode.insertBefore(dga, s);
   })();
 }, 5000);
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG46Y0LMK7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZG46Y0LMK7');
 </script>
+
 
 
 
