@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://loglist.github.io/2020/10/26/%E5%A6%82%E4%BD%95%E6%9F%A5%E6%89%BEgoogle-analytics-key/</loc>
+        <lastmod>2020-10-26T15:16:21.174Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://loglist.github.io/2020/10/23/react%E6%9E%81%E7%AE%80%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2020-10-26T14:49:17.619Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,14 +34,6 @@
     <url>
         <loc>http://loglist.github.io/2020/10/19/Hexo%E7%9A%84jsdelivr-picgo%E5%9B%BE%E5%BA%8A%E4%B8%8Erss%E8%AE%A2%E9%98%85/</loc>
         <lastmod>2020-10-26T14:07:17.461Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/2020/10/26/%E5%A6%82%E4%BD%95%E6%9F%A5%E6%89%BEgoogle-analytics-key/</loc>
-        <lastmod>2020-10-26T14:01:32.366Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
