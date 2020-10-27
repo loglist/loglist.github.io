@@ -3,134 +3,92 @@
 
 
     <url>
-        <loc>http://loglist.github.io/tags/volantis/</loc>
-        <lastmod>2020-10-26T15:28:07.940Z</lastmod>
+        <loc>http://loglist.github.io/tags/css/</loc>
+        <lastmod>2020-10-27T18:50:57.649Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/tags/google-analytics-key/</loc>
-        <lastmod>2020-10-26T15:28:07.940Z</lastmod>
+        <loc>http://loglist.github.io/tags/notes/</loc>
+        <lastmod>2020-10-27T18:50:57.649Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/tags/react/</loc>
-        <lastmod>2020-10-26T14:49:17.619Z</lastmod>
+        <loc>http://loglist.github.io/tags/error/</loc>
+        <lastmod>2020-10-27T18:50:16.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/tags/%25E6%259E%2581%25E7%25AE%2580/</loc>
-        <lastmod>2020-10-26T14:49:17.619Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/picgo/</loc>
-        <lastmod>2020-10-26T14:46:38.798Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/%25E5%259B%25BE%25E5%25BA%258A/</loc>
-        <lastmod>2020-10-26T14:46:38.798Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/kills/</loc>
-        <lastmod>2020-10-26T14:07:17.461Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/rss/</loc>
-        <lastmod>2020-10-26T14:07:17.461Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Numpy/</loc>
-        <lastmod>2020-10-26T13:35:42.311Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/Python/</loc>
-        <lastmod>2020-10-26T13:35:42.311Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/%25E7%25AC%2594%25E8%25AE%25B0/</loc>
-        <lastmod>2020-10-26T13:35:42.311Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/js/</loc>
-        <lastmod>2020-10-26T13:35:42.311Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/%25E7%25BD%2591%25E7%259B%2598/</loc>
-        <lastmod>2020-10-26T13:35:42.308Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/css3/</loc>
-        <lastmod>2020-10-26T13:35:42.308Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/C/</loc>
-        <lastmod>2020-10-26T13:35:15.790Z</lastmod>
+        <loc>http://loglist.github.io/tags/jsdelivr/</loc>
+        <lastmod>2020-10-27T18:50:16.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/Hexo/</loc>
-        <lastmod>2020-10-23T08:14:23.140Z</lastmod>
+        <lastmod>2020-10-27T18:49:59.263Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/rss/</loc>
+        <lastmod>2020-10-27T18:49:47.450Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/ffmpeg/</loc>
-        <lastmod>2020-10-23T07:56:53.497Z</lastmod>
+        <lastmod>2020-10-27T18:49:24.606Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/Shell/</loc>
-        <lastmod>2020-10-23T07:56:53.497Z</lastmod>
+        <lastmod>2020-10-27T18:49:24.606Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/tags/Linux/</loc>
-        <lastmod>2020-10-23T07:56:53.497Z</lastmod>
+        <loc>http://loglist.github.io/tags/react/</loc>
+        <lastmod>2020-10-27T18:45:30.298Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/js/</loc>
+        <lastmod>2020-10-27T18:44:57.706Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/C/</loc>
+        <lastmod>2020-10-27T16:16:21.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Numpy/</loc>
+        <lastmod>2020-10-27T16:08:47.460Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Python/</loc>
+        <lastmod>2020-10-27T16:08:47.460Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

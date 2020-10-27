@@ -19,16 +19,18 @@
 
   <!-- 页面元数据 -->
   
-  <title>react极简笔记 - loglist</title>
+  <title>react极简笔记 - Hpl’s blog</title>
   
-    <meta name="keywords" content="极简,react">
+    <meta name="keywords" content="notes,react">
   
 
+  
+    <meta name="description" content="作为新手，该怎么学习react呢？这是一篇reactjs的极简笔记">
   
 
   <!-- feed -->
   
-    <link rel="alternate" href="/atom.xml" title="loglist">
+    <link rel="alternate" href="/atom.xml" title="Hpl’s blog">
   
 
   <!-- import meta -->
@@ -426,8 +428,8 @@
           
             
 <div class="new-meta-item author">
-  <a class="author" href="/" rel="nofollow">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/loglist/loglist.github.io@master/storage/image/favicon/favicon-16x16.png">
+  <a class="author" href="https://github.com/loglist" target="_blank" rel="external nofollow noopener noreferrer">
+    <img no-lazy src="https://avatars0.githubusercontent.com/u/52250748?s=60&v=4">
     <p>H大</p>
   </a>
 </div>
@@ -572,7 +574,88 @@
 </ul>
 <h3 id="PropTypes"><a href="#PropTypes" class="headerlink" title="PropTypes"></a>PropTypes</h3><p>为了安全，子组件应对父组件传入的值类型做校验。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TodoItem.propTypes = &#123;</span><br><span class="line">	content: PropTypes.string,</span><br><span class="line">	deleteItem: PropTypes.func,</span><br><span class="line">	index: PropTypes.number</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h2><h3 id="真实DOM如何生成"><a href="#真实DOM如何生成" class="headerlink" title="真实DOM如何生成"></a>真实DOM如何生成</h3><p>react底层生成真实DOM的过程：JSX模板 -&gt; creatElement -&gt; JS对象 -&gt; 真实的DOM ；其中，JSX模板是react底层语法的另一种写法，因为react底层接口写出来的代码片段不易于理解且不方便。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">render()&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>item<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  <span class="comment">//等效于</span></span><br><span class="line">  <span class="keyword">return</span> React.creatElement(<span class="string">'div'</span>,&#123;&#125;,React.creatElement(<span class="string">'span'</span>,&#123;&#125;,<span class="string">'item'</span>))</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">### 虚拟DOM如何工作</span></span><br><span class="line"><span class="string">那么react是如何利用虚拟DOM提高性能的呢？</span></span><br><span class="line"><span class="string">1. state 数据</span></span><br><span class="line"><span class="string">2. JSX 模板</span></span><br><span class="line"><span class="string">3. 数据 + 模板 生成虚拟DOM （虚拟DOM是一个**JS对象**，用它来描述真是DOM）【损耗了极少的性能，因为是用JS生成一个JS对象】虚拟DOM的结构 ['名称',&#123;属性&#125;,'值']</span></span><br><span class="line"><span class="string">   如：['div',&#123;id:'abc'&#125;,['span',&#123;&#125;,'hello world']]</span></span><br><span class="line"><span class="string">4. 用虚拟DOM的结构生成真实的DOM，来显示</span></span><br><span class="line"><span class="string">   `</span><span class="string">``</span>html</span><br><span class="line">   &lt;div id=<span class="string">'abc'</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>state 发生变化</p>
+</li>
+<li><p>数据 + 模板 生成新的虚拟DOM （极大地提升了性能）<br>变：[‘div’,{id:’abc’},[‘span’,{},’bye bye’]]</p>
+</li>
+<li><p>比较原始虚拟DOM和新的虚拟DOM的区别，找到区别是span中内容（极大地提升了性能）</p>
+</li>
+<li><p>直接操作DOM，改变span中的内容</p>
+</li>
+</ol>
+<h3 id="虚拟DOM的优势"><a href="#虚拟DOM的优势" class="headerlink" title="虚拟DOM的优势"></a>虚拟DOM的优势</h3><ol>
+<li>性能提升 &lt;- 操作虚拟DOM进行比较，生成改变部分的真实DOM</li>
+<li>使跨端应用得以实现。React Native 是基于虚拟DOM而存在，确切的说，之所以react可以跨端开发，是因为虚拟DOM可以在不同环境中被渲染成适应不同环境的代码。<br>那和虚拟DOM有什么关系呢？那是因为<strong>虚拟DOM是一个JS对象</strong>，而JS对象在浏览器和原生应用中都能识别。</li>
+</ol>
+<h3 id="旧新虚拟DOM的DIFF算法"><a href="#旧新虚拟DOM的DIFF算法" class="headerlink" title="旧新虚拟DOM的DIFF算法"></a>旧新虚拟DOM的DIFF算法</h3><p>DIFF算法全称为difference算法，意味寻找虚拟DOM间的不同点。当数据被修改时，setState函数就会被调用一次，这是因为setState函数的功能就是修改数据的，理论上就会触发生成一次虚拟DOM的动作。那么，频繁地修改数据，即频繁地调用setState函数势必会造成性能的浪费。<br><br>那要怎么做才能将性能节省下来呢？答案很简单，攒起来做一次就好了；就像打印东西一下，一张一张地打印势必麻烦，那攒起来一下子全打印出来就好了。而setState被设计成异步函数正是出于此考量，当数据连续三次被修改的间隔较小时，setState函数就会将三次修改的内容并为一次进行触发一次生成虚拟DOM的动作。</p>
+<h3 id="具体的比对过程"><a href="#具体的比对过程" class="headerlink" title="具体的比对过程"></a>具体的比对过程</h3><p><img src="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201027233131.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201027233131.jpg" srcset="data:image/png;base64,666" alt="compare"><br>react采用对虚拟DOM进行同层比对的方式进行比较，当在第一层发现不同时，就会重新渲染本层及以下的内容——以此类推。</p>
+<h3 id="key值的作用"><a href="#key值的作用" class="headerlink" title="key值的作用"></a>key值的作用</h3><p>辅助虚拟DOM的同层比对更快进行，比较相同key的内容是否相同。因为index是变动的，所以不应作为key值，应用稳定的值作为key值。</p>
+<div class="tabs" id="删除e"><ul class="nav-tabs"><li class="tab active"><a class="#删除e-1">不稳定的值，index做key值</a></li><li class="tab"><a class="#删除e-2">稳定的值，自身做key值</a></li></ul><div class="tab-content"><div class="tab-pane active" id="删除e-1"><table>
+<thead>
+<tr>
+<th>删除e前</th>
+<th>删除e后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0 -&gt; h</td>
+<td>0 -&gt; h</td>
+</tr>
+<tr>
+<td>1 -&gt; e</td>
+<td>1 -&gt; l</td>
+</tr>
+<tr>
+<td>2 -&gt; l</td>
+<td>2 -&gt; l</td>
+</tr>
+<tr>
+<td>3 -&gt; l</td>
+<td>3 -&gt; o</td>
+</tr>
+<tr>
+<td>4 -&gt; o</td>
+<td></td>
+</tr>
+<tr>
+<td>生成新的虚拟DOM需要重新生成除“h,某个l”之外的其他所有部分</td>
+<td></td>
+</tr>
+</tbody></table></div><div class="tab-pane" id="删除e-2"><table>
+<thead>
+<tr>
+<th>删除e前</th>
+<th>删除e后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h -&gt; h</td>
+<td>h -&gt; h</td>
+</tr>
+<tr>
+<td>e -&gt; e</td>
+<td>l -&gt; l</td>
+</tr>
+<tr>
+<td>l -&gt; l</td>
+<td>l -&gt; l</td>
+</tr>
+<tr>
+<td>l -&gt; l</td>
+<td>o -&gt; o</td>
+</tr>
+<tr>
+<td>o -&gt; o</td>
+<td></td>
+</tr>
+<tr>
+<td>生成新的虚拟DOM只需删除e即可</td>
+<td></td>
+</tr>
+</tbody></table></div></div></div>
 
 
   
@@ -593,10 +676,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-26T22:49:17+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-28T02:45:30+08:00">
   <a class="notlink">
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年10月26日</p>
+    <p>更新于：2020年10月28日</p>
   </a>
 </div>
 
@@ -605,7 +688,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9E%81%E7%AE%80/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>极简</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/react/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>react</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/notes/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>notes</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/react/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>react</p></a></div>
 
 
         
@@ -696,7 +779,7 @@ JSON.parse()，将json-string转...</p>
 
 
     <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装react脚手架工具"><span class="toc-text">安装react脚手架工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目文件概要"><span class="toc-text">项目文件概要</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用案例学习react"><span class="toc-text">用案例学习react</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#react的组件"><span class="toc-text">react的组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义组件"><span class="toc-text">定义组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挂载组件"><span class="toc-text">挂载组件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSX基础语法"><span class="toc-text">JSX基础语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#占位符与其他函数"><span class="toc-text">占位符与其他函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件绑定"><span class="toc-text">事件绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义数据constructor"><span class="toc-text">定义数据constructor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据绑定（钩子）"><span class="toc-text">数据绑定（钩子）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#回调函数"><span class="toc-text">回调函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据的immutable特性"><span class="toc-text">数据的immutable特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化"><span class="toc-text">美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不被转义"><span class="toc-text">不被转义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引入style-css"><span class="toc-text">引入style.css</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#label-for"><span class="toc-text">label for</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件的拆分"><span class="toc-text">组件的拆分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#新建组件"><span class="toc-text">新建组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引入组件"><span class="toc-text">引入组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子父组件的值传递"><span class="toc-text">子父组件的值传递</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码优化"><span class="toc-text">代码优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明式与命令式开发"><span class="toc-text">声明式与命令式开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PropTypes"><span class="toc-text">PropTypes</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装react脚手架工具"><span class="toc-text">安装react脚手架工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目文件概要"><span class="toc-text">项目文件概要</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用案例学习react"><span class="toc-text">用案例学习react</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#react的组件"><span class="toc-text">react的组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义组件"><span class="toc-text">定义组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挂载组件"><span class="toc-text">挂载组件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSX基础语法"><span class="toc-text">JSX基础语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#占位符与其他函数"><span class="toc-text">占位符与其他函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件绑定"><span class="toc-text">事件绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义数据constructor"><span class="toc-text">定义数据constructor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据绑定（钩子）"><span class="toc-text">数据绑定（钩子）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#回调函数"><span class="toc-text">回调函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据的immutable特性"><span class="toc-text">数据的immutable特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化"><span class="toc-text">美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不被转义"><span class="toc-text">不被转义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引入style-css"><span class="toc-text">引入style.css</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#label-for"><span class="toc-text">label for</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件的拆分"><span class="toc-text">组件的拆分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#新建组件"><span class="toc-text">新建组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引入组件"><span class="toc-text">引入组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子父组件的值传递"><span class="toc-text">子父组件的值传递</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码优化"><span class="toc-text">代码优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明式与命令式开发"><span class="toc-text">声明式与命令式开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PropTypes"><span class="toc-text">PropTypes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟DOM"><span class="toc-text">虚拟DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#真实DOM如何生成"><span class="toc-text">真实DOM如何生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟DOM的优势"><span class="toc-text">虚拟DOM的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旧新虚拟DOM的DIFF算法"><span class="toc-text">旧新虚拟DOM的DIFF算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#具体的比对过程"><span class="toc-text">具体的比对过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#key值的作用"><span class="toc-text">key值的作用</span></a></li></ol></li></ol>
     </div>
   </section>
 

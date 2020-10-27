@@ -8,15 +8,22 @@
     </url>
 
     <url>
-        <loc>http://loglist.github.io/categories/Site/</loc>
-        <lastmod>2020-10-26T15:28:07.940Z</lastmod>
+        <loc>http://loglist.github.io/categories/Code/</loc>
+        <lastmod>2020-10-27T18:50:57.649Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://loglist.github.io/categories/Code/</loc>
-        <lastmod>2020-10-26T14:49:17.619Z</lastmod>
+        <loc>http://loglist.github.io/categories/Skill/</loc>
+        <lastmod>2020-10-27T18:50:16.405Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/categories/Site/</loc>
+        <lastmod>2020-10-27T16:17:12.780Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
