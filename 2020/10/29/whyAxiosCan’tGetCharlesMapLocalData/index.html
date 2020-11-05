@@ -19,9 +19,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>category - Hpl’s blog</title>
+  <title>axios get 不到 Charles map local 的接口数据 - Hpl’s blog</title>
+  
+    <meta name="keywords" content="Charles,proxy">
   
 
+  
+    <meta name="description" content="why axios can’t get charles map local data? It's the error about proxy.">
   
 
   <!-- feed -->
@@ -367,7 +371,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class="cover-wrapper category search" style="display: none;">
+        <div id="full" class="cover-wrapper post search" style="display: none;">
           
             <div class="cover-bg lazyload placeholder" data-bg></div>
           
@@ -406,45 +410,173 @@
       <div class="body-wrapper" id="pjax-container">
         
 
-
 <div class="l_main">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      <div class="post-wrapper">
-        <article id="cat" class="post article white-box reveal shadow">
-          <h2>category</h2>
-          <div class="all-cats">
-            
-              
-                <a class href="/categories/Code/">
-                  <span><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Code</span>
-                  <span class="title">
-                    (6)
-                  </span>
-                </a>
-              
-                <a class href="/categories/Site/">
-                  <span><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Site</span>
-                  <span class="title">
-                    (2)
-                  </span>
-                </a>
-              
-                <a class href="/categories/Skill/">
-                  <span><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Skill</span>
-                  <span class="title">
-                    (6)
-                  </span>
-                </a>
-              
-            
-          </div>
-          <br>
+    
+    
+      <h1 class="title">
+        axios get 不到 Charles map local 的接口数据
+      </h1>
+      <div class="new-meta-box">
+        
           
-        </article>
+            
+<div class="new-meta-item author">
+  <a class="author" href="https://github.com/loglist" target="_blank" rel="external nofollow noopener noreferrer">
+    <img no-lazy src="https://avatars0.githubusercontent.com/u/52250748?s=60&v=4">
+    <p>H大</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item category">
+    <a class="notlink">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Skill/">Skill</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年10月29日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
       </div>
     
+  </div>
+
+
   
+  <p>之前学习react课程的过程中，在用Charles模拟本地接口数据供Ajax请求时，一直在报错，这是为什么？有<a href="https://www.charlesproxy.com/documentation/faqs/localhost-traffic-doesnt-appear-in-charles/" target="_blank" rel="external nofollow noopener noreferrer">官方文档</a>指出，这里就略过了。<br><del>大致意思是代理的问题吧。</del><br>参照着一些<a href="https://blog.csdn.net/weixin_43735348/article/details/100824002" target="_blank" rel="external nofollow noopener noreferrer">博客</a>，还是没解决掉这个问题。<br>然后就意识到可能是代理出了错。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol>
+<li>确定你没有开启诸如proxyfier、v2rayN之类的软件，这类软件会代理系统的某些http端口。总之，关掉就是了。</li>
+<li><span class="p red">修改 网络——>代理——>手动代理 设置为 http://127.0.0.1:8888</span>，以WIN10举例，如下图。
+ <img src="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150220.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150220.jpg" srcset="data:image/png;base64,666" alt="8888"><br> 这里我按照博客尝试了很多，比如修改host、react的json文件、或是axios get方法中的路径等——没有奏效。只用改代理端口为8888就好。</li>
+<li>修改Charles的Tools -&gt; Map Local Settings -&gt; Edit Mapping, 如下图。<br><img src="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150315.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150315.jpg" srcset="data:image/png;base64,666" alt="editmapping"></li>
+</ol>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>于是，就有<img src="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150340.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/loglist/img@master02/20201029150340.jpg" srcset="data:image/png;base64,666" alt="succ"><br>看到那个 <strong>Remote Address</strong> 没？</p>
+
+  
+  
+    
+    <div class="footer">
+      
+      
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-29T15:10:03+08:00">
+  <a class="notlink">
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年10月29日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Charles/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Charles</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/proxy/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>proxy</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class="prev" href="/2020/11/05/react%E6%A1%88%E4%BE%8B-%E7%AE%80%E4%B9%A6/">
+          <p class="title"><i class="fas fa-chevron-left" aria-hidden="true"></i>react案例-简书</p>
+          <p class="content"></p>
+        </a>
+      
+      
+        <a class="next" href="/2020/10/26/Jsdeivr%E9%99%90%E5%88%B650M%E5%90%8E%E6%80%8E%E4%B9%88%E5%8A%9E/">
+          <p class="title">Jsdelivr限制50M怎么办<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">后来,我遇到了这个问题，尝试使用tag来解决。诚然，每逢50M打上tag-release之后的包jsdeivr会进行cdn加速，而且也不会被删除。
+
+但是，在从master转成v1【tag】这段...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class="fas fa-comments"></i> 评论</p>
+    
+    <div id="gitalk-container"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class="l_side">
   
@@ -454,11 +586,26 @@
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class="name">目录</span>
+    
+  </header>
+
+
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法"><span class="toc-text">解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结果"><span class="toc-text">结果</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
         
@@ -468,8 +615,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="axios get 不到 Charles map local 的接口数据";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

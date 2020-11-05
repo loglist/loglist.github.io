@@ -3,15 +3,43 @@
 
 
     <url>
-        <loc>http://loglist.github.io/tags/css/</loc>
-        <lastmod>2020-10-27T18:50:57.649Z</lastmod>
+        <loc>http://loglist.github.io/tags/react/</loc>
+        <lastmod>2020-11-05T13:58:36.659Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://loglist.github.io/tags/notes/</loc>
-        <lastmod>2020-10-27T18:50:57.649Z</lastmod>
+        <lastmod>2020-11-05T13:58:36.659Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/project/</loc>
+        <lastmod>2020-11-05T13:58:28.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/css/</loc>
+        <lastmod>2020-10-29T08:46:56.898Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/proxy/</loc>
+        <lastmod>2020-10-29T07:10:03.966Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://loglist.github.io/tags/Charles/</loc>
+        <lastmod>2020-10-29T07:10:03.966Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -54,13 +82,6 @@
     <url>
         <loc>http://loglist.github.io/tags/Shell/</loc>
         <lastmod>2020-10-27T18:49:24.606Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://loglist.github.io/tags/react/</loc>
-        <lastmod>2020-10-27T18:45:30.298Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
