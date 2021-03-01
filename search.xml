@@ -31,31 +31,6 @@
     
     
     <entry>
-      <title>Dynamo实战应用</title>
-      <link href="2020/11/15/dynamo%E5%AE%9E%E6%88%98%E5%BA%94%E7%94%A8/"/>
-      <url>2020/11/15/dynamo%E5%AE%9E%E6%88%98%E5%BA%94%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<h3 id="拱桥制作"><a href="#拱桥制作" class="headerlink" title="拱桥制作"></a>拱桥制作</h3><p>dynamo 的强项并不在于 <strong>参数建模</strong>，而在于与 Revit 的数据库联动——获取、分析、编辑数据。</p><span class="btn 样式参数（可选）"><a class="button" href="/storage/html/csscode/css3-cube.html" title="运行一下"><i class="fas fa-terminal"></i>运行一下</a></span><h3 id="Folding-box"><a href="#Folding-box" class="headerlink" title="Folding box"></a>Folding box</h3><details 参数（可选）><summary> 标题 </summary>              <div class="content">              <p><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg" srcset="data:image/png;base64,666" alt></p>              </div>            </details><div class="tag link"><a class="link-card" title="shell提取文字的一些方法" href="https://hasaik.com/posts/19c94341.html" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/256/safari.png" srcset="data:image/png;base64,666"></div><div class="right"><p class="text">shell提取文字的一些方法</p><p class="url">https://hasaik.com/posts/19c94341.html</p></div></a></div><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table><thead><tr><th align="center">&lt;!– <strong>工具名</strong></th><th align="center"><strong>描述</strong></th><th align="center"><strong>备注</strong></th></tr></thead><tbody><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center"></td><td align="center">–&gt;</td></tr></tbody></table><h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><script src="//gist.github.com/gist_id.js?file=[filename]"></script><div class="tabs" id="页面内不重复的id"><ul class="nav-tabs"><li class="tab active"><a class="#页面内不重复的id-1">栏目1</a></li><li class="tab"><a class="#页面内不重复的id-2">栏目2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="页面内不重复的id-1"><p>内容</p></div><div class="tab-pane" id="页面内不重复的id-2"><p>内容</p></div></div></div><div class="video"><video controls preload><source src="https://o.aaah.ga/t/4SuLG8" type="video/mp4">Your browser does not support the video tag.</video></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> BIM </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Dynamo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>react案例-简书</title>
       <link href="2020/11/05/react%E6%A1%88%E4%BE%8B-%E7%AE%80%E4%B9%A6/"/>
       <url>2020/11/05/react%E6%A1%88%E4%BE%8B-%E7%AE%80%E4%B9%A6/</url>
